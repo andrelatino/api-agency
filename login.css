@@ -1,0 +1,112 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6, label {
+  font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
+}
+body{
+background-color: #456BD9;
+margin:0;
+}
+div#version {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    right: 50%;
+    color: black;
+}
+p#version {
+    text-align: center;
+    color: darkgrey;
+}
+#formBox{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 300px;
+    gap: 5px;
+    font-size: 12px;
+    text-transform: capitalize;;
+    place-content: center;
+}
+#formLogin{
+    padding: 35px;
+    border-radius: 10px;
+}
+#formLogin input {
+    border: none;
+    width: 100%;
+    height: 33px;
+    background: #456bd9;
+    border-bottom: 2px dotted white;
+    color: white;
+    font-size: 16px;
+}
+label {
+    visibility: hidden;
+}
+input#formLoginButton {
+    background: #ffffff;
+    color: white;
+    min-height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+    border: none!important;
+    box-shadow: 1px 1px 16px #27459d;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+#loginMessage{
+    text-align: center;
+}
+p#formTitle {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 200;
+    color:white;
+}
+
+/*PRELOADER*/
+
+#g-progressbar {
+    opacity:0;
+}
+
+.g-progressbar-loading {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+	height: 2px;
+    background-color: rgba(238, 238, 238, 0.22);
+}
+
+.g-progressbar-inner-loading {
+	right: 10%;
+	animation-name: spinner-loading;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+	-webkit-transition: right 3.5s linear;
+    transition: right 3.5s linear;
+	position: relative;
+    width: 100%;
+    height: 100%;
+	background-color: #61aaf2;
+}
+
+@keyframes spinner-loading {
+	from {
+		right: 100%;
+	}
+
+	to {
+		right: -100%;
+	}
+}

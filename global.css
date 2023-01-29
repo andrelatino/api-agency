@@ -1,0 +1,66 @@
+html, body, h1, h2, h3, h4, h5, h6 p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6, label {
+  font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
+}
+body{
+  padding: 0px 20px;
+  background: white;
+}
+#title {
+    padding: 10px 0;
+    font-size: 42px;
+    display: grid;
+    place-content: center;
+    font-weight: 200;
+}
+.items {
+    padding: 10px;
+    border: 1px solid #f8f8f8;
+}
+.days {
+    display: grid;
+    place-content: center;
+    padding: 5px;
+}
+.nav-style{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    border: 1px solid #c3c3c3;
+    font-size: 20px;
+}
+.open-btn {
+    background: #046afb;
+    color:white;
+}
+.close-btn {
+    background: red;
+    color:white;
+    display: none;
+}
+div#popup {
+    position: fixed;
+    bottom: 95px;
+    background: #046afb;
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    right: 28px;
+    color: white;
+    padding: 5px;
+    display: grid;
+    grid-gap: 2px;
+}
+div#popup a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    background: #0000000a;
+    border-radius: 10px;
+}

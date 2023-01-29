@@ -20,8 +20,12 @@ function getData(){
     fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/project')
     .then(response => response.json())
     .then(data => {  
+
+        showVersion.style.display="grid";
         
-        console.log(`Total items: ${data.length}`);
+        titleProjects = data.projects.length;
+        addTitle = document.getElementById('title');
+        addTitle.innerHTML= "<div class= 'titulo'>Projects <span>("+titleProjects+")</span></div>";
       
         setInterval(hideProgressBar, 1000);
         
@@ -37,10 +41,9 @@ function getData(){
                 
                 <div class="content">        
                     <p>Project : ${api.projectName} ${api.projectTech}</p>
-                    <p>Budget : ${api.projectBudget} Agency : ${api.projectOffer}$</p>
-                    <p>Start : ${api.projectStart} End : ${api.projectEnd}</p> 
-                    
-                    <p>Status : ${api.projectStatus}</p> 
+                    <p>Budget : ${api.projectBudget}$ Status : ${api.projectStatus}</p>
+                    <p>Start : ${api.projectStart} End : ${api.projectEnd}</p>
+                    <p>Agency : ${api.agency[0].web}</p>
                     <div class="days" id="${daysId}"></div>             
                 </div>
             </button>
@@ -50,7 +53,9 @@ function getData(){
 
         GridList.appendChild(DivItems);
 
-        var date_1 = new Date(api.projectStart);
+        var today = new Date();
+        currentDate = today.getFullYear() + "-" + (today.getMonth() + 1).toString().padStart(2, '0') + "-" + today.getDate().toString().padStart(2, '0');
+        var date_1 = new Date(currentDate);
         var date_2 = new Date(api.projectEnd);
         
         var day_as_milliseconds = 86400000;

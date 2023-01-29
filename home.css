@@ -85,8 +85,8 @@ font-weight: 900px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    
-    padding:0;
+    margin-bottom: 120px;    
+    padding:20px;
     place-content: space-evenly;
     
   }

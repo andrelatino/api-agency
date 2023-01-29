@@ -2,15 +2,15 @@ html, body, h1, h2, h3, h4, h5, h6 p, ol, ul, li, dl, dt, dd, blockquote, figure
   font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
 }
 body{
-  padding: 0px 20px;
   background: white;
+  margin:0;
 }
 #title {
-    padding: 10px 0;
-    font-size: 42px;
+    font-size: 26px;
     display: grid;
     place-content: center;
-    font-weight: 200;
+    font-weight: 300;
+    margin-top: 20px;
 }
 .items {
     padding: 10px;
@@ -21,18 +21,17 @@ body{
     place-content: center;
     padding: 5px;
 }
-.nav-style{
+.nav-style {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 30px;
+    bottom: 20px;
+    right: 27px;
     padding: 20px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     display: grid;
     place-content: center;
-    border: 1px solid #c3c3c3;
+    border: none;
     font-size: 20px;
 }
 .open-btn {
@@ -63,4 +62,16 @@ div#popup a {
     padding: 15px;
     background: #0000000a;
     border-radius: 10px;
+}
+#versionBox {
+    background-color: white;
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#versionNumber{
+    color: #696969;
+    display:none;
+    place-content: center;
 }

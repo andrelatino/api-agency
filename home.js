@@ -30,7 +30,7 @@ function getData(){
                 <div class="content">        
                     <p class ='project'>PR : ${api.projectName} ${api.projectTech}</p>
                     <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>                    
-                    <p>AG : ${api.agency[0].web}</p>                               
+                    <p>AG : ${api.agency[0].web}</p>                           
                 </div>
                 <div class = "media">
                     <div class="timer" id="${daysId}"></div>  

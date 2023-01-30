@@ -1,4 +1,4 @@
-var CACHE_VERSION = "v1";
+var CACHE_VERSION = "v8";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
@@ -6,15 +6,11 @@ self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => {
             cache.addAll([
-                "./index.css",
-                "./index.js",
-                "./index.html",
-                "./login.css",
-                "./login.js",
-                "./login.html",
+                
                 "./manifest.json",
                 "./sw.js",
-                "./512x512.png"
+                "./512x512.png",
+                "./home.html",
             ])
         })
     )
@@ -42,9 +38,10 @@ self.addEventListener("fetch", (event) => {
             return caches.match(event.request).then((response) => {
                 if (response) {
                     return response;
-                } else if (event.request.headers.get("accept").includes("text/html")) {
-                    return caches.match("./index.html");
-                }
+                } 
+                // else if (event.request.headers.get("accept").includes("text/html")) {
+                //     return caches.match("./");
+                // }
             });
         })
     );

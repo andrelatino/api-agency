@@ -3,20 +3,6 @@ if (localStorage.getItem("authToken") == null) {
   window.location.href = '../login.html';
 }
 
-
-// Create a new <link> element for the manifest.json file
-var link = document.createElement('link');
-link.rel = 'manifest';
-link.href = './manifest.json';
-
-// Create a new <script> element for the sw.js file
-var script = document.createElement('script');
-script.src = './sw.js';
-
-// Append the elements to the <head>
-document.head.appendChild(link);
-document.head.appendChild(script);
-
 /** NAV BOTTOM */
 var openBtn = document.createElement('button');
 openBtn.innerHTML = '+';

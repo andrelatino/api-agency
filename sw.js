@@ -1,25 +1,20 @@
-
-
-
-var CACHE_VERSION = "v8";
-var CACHE = "neo-manager" + CACHE_VERSION;
+var CACHE_VERSION = "v1";
+var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
 self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => {
             cache.addAll([
-                "./manifest.json",
-                "./sw.js",
-                "./512x512.png",
-                "./index.html",
                 "./index.css",
                 "./index.js",
-                "./global.js",
-                "./global.css",
-                "./home.html",
-                "./home.css",
-                "./home.js",                
+                "./index.html",
+                "./login.css",
+                "./login.js",
+                "./login.html",
+                "./manifest.json",
+                "./sw.js",
+                "./512x512.png"
             ])
         })
     )
@@ -31,7 +26,7 @@ self.addEventListener("activate", (event) => {
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
-                    if (cacheName.startsWith("neo-manager") && cacheName !== CACHE) {
+                    if (cacheName.startsWith("neo-manager-") && cacheName !== CACHE) {
                         return caches.delete(cacheName);
                     }
                 })
@@ -48,7 +43,7 @@ self.addEventListener("fetch", (event) => {
                 if (response) {
                     return response;
                 } else if (event.request.headers.get("accept").includes("text/html")) {
-                    return caches.match("./home.html");
+                    return caches.match("./index.html");
                 }
             });
         })

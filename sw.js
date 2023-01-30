@@ -9,11 +9,17 @@ self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => {
             cache.addAll([
-                "./login.css",
-                "./login.js",
-                "./index.html",
                 "./manifest.json",
                 "./sw.js",
+                "./512x512.png",
+                "./index.html",
+                "./index.css",
+                "./index.js",
+                "./app/global.js",
+                "./app/global.css",
+                "./app/home.html",
+                "./app/home.css",
+                "./app/home.js",                
             ])
         })
     )

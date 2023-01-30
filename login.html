@@ -6,26 +6,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google" content="notranslate" />
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" type="text/css" href="./login.css">
   </head>
   <body class="text-center">
+  <div id="g-progressbar">
+    <div class="g-progressbar-loading">
+      <div class="g-progressbar-inner-loading"></div>
+    </div>
+  </div>
   <div id = "formBox" >  
       <form id="formLogin">
-        <p id="formTitle">NeoWeb360°</p>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" autocomplete="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" autocomplete="current-password"><br><br>
-        <input type="submit" id="formLoginButton"value="LOGIN">
-        <p id="loginMesagge"></p>
-        <div id="g-progressbar">
-          <div class="g-progressbar-loading">
-            <div class="g-progressbar-inner-loading"></div>
-          </div>
+        <div id="formTitleBox">
+          <p id="formTitle">NeoWeb360°</p> 
         </div>
+        <div id="formInputsBox">
+          <input type="email" id="email" name="email" autocomplete="username"><br>        
+          <input type="password" id="password" name="password" autocomplete="current-password"><br><br>
+          <input type="submit" id="formLoginButton"value="LOGIN">
+        </div>       
       </form>
     </div>
-    <div id="versionNumber"></div> 
+    <div id="versionNumber">v5</div> 
     <footer>
       <script src="./login.js"></script>
     </footer>

@@ -1,4 +1,14 @@
-
+#title {
+  font-size: 26px;
+  display: grid;
+  place-content: center;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.items {
+  padding: 10px;
+  border: 1px solid #f8f8f8;
+}
 p.name {
   font-weight: 600;
 }

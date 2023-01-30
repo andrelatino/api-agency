@@ -1,5 +1,5 @@
 if (localStorage.getItem("authToken") !== null) {
-    window.location.href = './index.html';
+    window.location.href = '../login.html';
 }
 const loginForm = document.getElementById('formLogin');
 
@@ -34,7 +34,7 @@ loginForm.addEventListener('submit', (event) => {
         const authToken = data.authToken;
         localStorage.setItem('authToken', authToken);
         if (authToken) {
-          window.location.href = './home.html';
+          window.location.href = './app/home.html';
           // alert ("You are logged");
         }
       });

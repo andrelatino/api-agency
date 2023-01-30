@@ -28,11 +28,12 @@ function getData(){
             <button class="edit" id="btn${api.id}">
                 
                 <div class="content">        
-                    <p>Project : ${api.projectName} ${api.projectTech}</p>
-                    <p>Budget : ${api.projectBudget}$ Status : ${api.projectStatus}</p>
-                    
-                    <p>Agency : ${api.agency[0].web}</p>
-                    <div class="days" id="${daysId}"></div>             
+                    <p class ='project'>PR : ${api.projectName} ${api.projectTech}</p>
+                    <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>                    
+                    <p>AG : ${api.agency[0].web}</p>                               
+                </div>
+                <div class = "media">
+                    <div class="timer" id="${daysId}"></div>  
                 </div>
             </button>
             
@@ -52,7 +53,7 @@ function getData(){
         
         console.log( diff_in_days );
         var addDate = document.getElementById(daysId);
-        addDate.innerHTML = "Days left : " +diff_in_days;
+        addDate.innerHTML = diff_in_days+"j";
 
             const button = document.getElementById(`btn${api.id}`);
             button.addEventListener('click', () => {
@@ -60,10 +61,10 @@ function getData(){
 
                 // document.getElementById('edit_title').innerHTML = `Edit(${api.id})`;
                 
-                localStorage.setItem("client_id", api.id);
-                localStorage.setItem("client_name", api.name);
+                // localStorage.setItem("client_id", api.id);
+                // localStorage.setItem("client_name", api.name);
                 
-                window.location.href = 'service.html';
+                // window.location.href = 'service.html';
                 
 
             });

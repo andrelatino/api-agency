@@ -1,16 +1,21 @@
-var CACHE_VERSION = "v11";
+var CACHE_VERSION = "v12";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
 self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => {
-            cache.addAll([
-                
+            cache.addAll([                
                 "./manifest.json",
                 "./sw.js",
                 "./512x512.png",
-                "./home.html",
+                "./index.html",
+                "./index.css",
+                "./index.js",
+                "./login.html",
+                "./login.js",
+                "./login.css",
+                "./bg1.svg",
             ])
         })
     )

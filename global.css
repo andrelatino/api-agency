@@ -2,24 +2,9 @@ html, body, h1, h2, h3, h4, h5, h6 p, ol, ul, li, dl, dt, dd, blockquote, figure
   font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
 }
 body{
-  background: white;
+  background: #046afb;
+  background-image: url("bg1.svg");
   margin:0;
-}
-#title {
-    font-size: 26px;
-    display: grid;
-    place-content: center;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.items {
-    padding: 10px;
-    border: 1px solid #f8f8f8;
-}
-.days {
-    display: grid;
-    place-content: center;
-    padding: 5px;
 }
 .nav-style {
     position: fixed;
@@ -32,36 +17,38 @@ body{
     display: grid;
     place-content: center;
     border: none;
-    font-size: 20px;
+    
 }
 .open-btn {
-    background: #046afb;
-    color:white;
+    background: #ffffff;
+    color: #040404;
+    font-size: 30px;
 }
-.close-btn {
-    background: red;
-    color:white;
+.close-btn {  
+    background: #002a68;
+    color: white;
+    border: none;
     display: none;
+    font-size: 17px;
+    
 }
 div#popup {
     position: fixed;
     bottom: 95px;
-    background: #046afb;
+    background: #b0b0b0;
     width: 180px;
     height: auto;
     border-radius: 10px;
     right: 28px;
-    color: white;
-    padding: 5px;
     display: grid;
-    grid-gap: 2px;
+    grid-gap: 1px;
+    overflow: hidden;
 }
 div#popup a {
-    color: white;
+    color: #010101;
     text-decoration: none;
     padding: 15px;
-    background: #0000000a;
-    border-radius: 10px;
+    background: white;
 }
 #versionBox {
     background-color: white;
@@ -69,9 +56,4 @@ div#popup a {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-#versionNumber{
-    color: #696969;
-    display:none;
-    place-content: center;
 }

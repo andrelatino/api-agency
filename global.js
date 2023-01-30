@@ -1,11 +1,11 @@
 
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../sw.js');
+  navigator.serviceWorker.register('./sw.js');
 }
 
 if (localStorage.getItem("authToken") == null) {
-  window.location.href = '../login.html';
+  window.location.href = './login.html';
 }
 
 /** NAV BOTTOM */
@@ -44,7 +44,7 @@ closeBtn.addEventListener('click', function() {
 
 function logoutUser() {
   localStorage.removeItem("authToken");
-  window.location.href = '../login.html'
+  window.location.href = './login.html'
 }
 
 

@@ -3,3 +3,6 @@ if (localStorage.getItem("authToken") == null) {
 }else{
     window.location.href = './app/home.html';
 }
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+}

@@ -1,5 +1,5 @@
 /** Versioning */
-addVersion = "v3";
+addVersion = "v4";
 showVersion = document.getElementById('versionNumber');
 showVersion.innerHTML = addVersion;
 

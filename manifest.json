@@ -1,7 +1,7 @@
 
  {
-    "background_color": "#456BD9",
-    "description": "Task Manager.",
+    "background_color": "#046afb",
+    "description": "Neo Manager",
     "display": "standalone",
     "icons": [
       {
@@ -11,9 +11,9 @@
         "purpose": "any maskable"
       }
     ],
-    "name": "Task Manager",
+    "name": "Neo Manager",
     "orientation": "natural",
-    "short_name": "Task Manager",
-    "start_url": "./",
-    "theme_color": "#456BD9"
+    "short_name": "Neo Manager",
+    "start_url": "./home.html",
+    "theme_color": "#046afb"
   }

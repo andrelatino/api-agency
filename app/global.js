@@ -22,6 +22,7 @@ document.body.appendChild(closeBtn);
 var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
+<a href = 'javascript:logoutUser();'> Login-out </a>
 <a href = 'allstats.html'> See all stats </a>
 <a href = 'newproject.html'> Add new project </a>
 </div>
@@ -40,5 +41,10 @@ closeBtn.addEventListener('click', function() {
   openBtn.style.display = 'grid';
   closeBtn.style.display = 'none';
 });
+
+function logoutUser() {
+  localStorage.removeItem("authToken");
+  window.location.href = '../login.html'
+}
 
 

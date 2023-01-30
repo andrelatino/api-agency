@@ -1,61 +1,61 @@
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6, label {
-  font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
-}
-body{
-background-color: #046afb;
-margin:0;
-}
-#formBox{
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: 250px;
-    gap: 5px;
-    font-size: 12px;
-    text-transform: capitalize;;
-    place-content: center;
-}
-#formTitle {
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    font-size: 35px;
-    font-weight: 200;
-    color: white;
-}
-#formInputsBox {
-    display: grid;
-}
-
-input[type=email], 
-input[type=password]
-{
-    border: none;
-    width: 100%;
-    height: 33px;
-    background: #046afb;
-    border-bottom: 2px dotted white;
-    color: white;
-    font-size: 16px;
-}
-input[type=submit]{
-    background: #ffffff;
-    color: white;
-    min-height: 50px;
-    border-radius: 10px;
-    margin-top: 20px;
-    color: black;
-    font-size: 20px;
-    border: none!important;
-    box-shadow: 10px 10px 10px #0050c357;
-}
-textarea:focus, input:focus{
-    outline: none;
-}
-div#versionNumber {
-    position: absolute;
-    bottom: 30px;
-    text-align: center;
-    width: 100%;
-    color: white;
-}
+    font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
+  }
+  body{
+  background-color: #046afb;
+  margin:0;
+  }
+  #formBox{
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: 250px;
+      gap: 5px;
+      font-size: 12px;
+      text-transform: capitalize;;
+      place-content: center;
+  }
+  #formTitle {
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-size: 35px;
+      font-weight: 200;
+      color: white;
+  }
+  #formInputsBox {
+      display: grid;
+  }
+  
+  input[type=email], 
+  input[type=password]
+  {
+      border: none;
+      width: 100%;
+      height: 33px;
+      background: #046afb;
+      border-bottom: 2px dotted white;
+      color: white;
+      font-size: 16px;
+  }
+  input[type=submit]{
+      background: #ffffff;
+      color: white;
+      min-height: 50px;
+      border-radius: 10px;
+      margin-top: 20px;
+      color: black;
+      font-size: 20px;
+      border: none!important;
+      box-shadow: 10px 10px 10px #0050c357;
+  }
+  textarea:focus, input:focus{
+      outline: none;
+  }
+  div#versionNumber {
+      position: absolute;
+      bottom: 30px;
+      text-align: center;
+      width: 100%;
+      color: white;
+  }

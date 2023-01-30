@@ -1,7 +1,7 @@
 
 
 
-var CACHE_VERSION = "v1";
+var CACHE_VERSION = "v6";
 var CACHE = "neo-manager" + CACHE_VERSION;
 
 // Call install event
@@ -48,7 +48,7 @@ self.addEventListener("fetch", (event) => {
                 if (response) {
                     return response;
                 } else if (event.request.headers.get("accept").includes("text/html")) {
-                    return caches.match("./index.html");
+                    return caches.match("./app/home.html");
                 }
             });
         })

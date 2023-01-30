@@ -14,6 +14,6 @@
     "name": "Neo Manager",
     "orientation": "natural",
     "short_name": "Neo Manager",
-    "start_url": "./app/",
+    "start_url": "./app/home.html",
     "theme_color": "#046afb"
   }

@@ -1,0 +1,19 @@
+
+ {
+    "background_color": "#456BD9",
+    "description": "Task Manager.",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "./512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "name": "Task Manager",
+    "orientation": "natural",
+    "short_name": "Task Manager",
+    "start_url": "./",
+    "theme_color": "#456BD9"
+  }

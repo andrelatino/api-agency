@@ -2,7 +2,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
 }
 body{
-background-color: #456BD9;
+background-color: #046afb;
 margin:0;
 }
 div#version {
@@ -34,7 +34,7 @@ p#version {
     border: none;
     width: 100%;
     height: 33px;
-    background: #456bd9;
+    background: #046afb;
     border-bottom: 2px dotted white;
     color: white;
     font-size: 16px;

@@ -11,9 +11,9 @@ function getData(){
     .then(response => response.json())
     .then(data => {  
         
-        titleProjects = data.projects.length;
-        addTitle = document.getElementById('title');
-        addTitle.innerHTML= "<div class= 'titulo'>Projects <span>("+titleProjects+")</span></div>";
+        totalProjects = data.projects.length;
+        addTitle = document.getElementById('grid');
+        addTitle.innerHTML= "<div class= 'titulo'>Total <span>("+totalProjects+")</span></div>";
       
         setInterval(hideProgressBar, 1000);
         
@@ -30,7 +30,8 @@ function getData(){
                 <div class="content">        
                     <p class ='project'>PR : ${api.projectName} ${api.projectTech}</p>
                     <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>                    
-                    <p>AG : ${api.agency[0].web}</p>                           
+                    <p>AG : ${api.agency[0].web}</p>
+                    <p>PM : ${api.agency[0].Manager}</p>                           
                 </div>
                 <div class = "media">
                     <div class="timer" id="${daysId}"></div>  

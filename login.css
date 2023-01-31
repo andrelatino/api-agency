@@ -4,6 +4,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   body{
   background-color: #046afb;
   margin:0;
+  max-height: 100vh;
   }
   #formBox{
       display: grid;

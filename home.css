@@ -8,9 +8,13 @@
   margin: 0;
   height: 50px;
 }
+.steps {
+    padding: 10px;
+    color: #ffffff70;
+}
 .titulo {
   margin-left: 15px;
-  color: #ffffffe0;
+  color: #ffffff70;
 }
 p.name {
   font-weight: 600;

@@ -1,10 +1,12 @@
 html, body, h1, h2, h3, h4, h5, h6 p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6, label {
   font-family: system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif!important;
 }
-body{
-  background: #046afb;
-  background-image: url("bg1.svg");
-  margin:0;
+body {
+    background: #046afb;
+    background-image: url(bg1.svg);
+    margin: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .nav-style {
     position: fixed;

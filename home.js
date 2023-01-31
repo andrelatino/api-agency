@@ -33,8 +33,9 @@ function getData(){
                     <p>AG : ${api.agency[0].web}</p>
                     <p>PM : ${api.agency[0].Manager}</p>                           
                 </div>
-                <div class = "media">
+                <div class = "media">                    
                     <div class="timer" id="${daysId}"></div>  
+                    <div class="steps">step : 1</div>
                 </div>
             </button>
             

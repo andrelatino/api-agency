@@ -26,9 +26,8 @@ function getData(){
         DivItems.innerHTML = `
                 
             
-            <button class="edit" id="btn${api.id}">
-                
-                <div class="content">        
+            <button class="edit" id="btn${api.id}">                
+                <div class="content">                   
                     <p class ='project'>PR : ${api.projectName} ${api.projectTech}</p>
                     <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>                    
                     <p>AG : ${api.agency[0].web}</p>
@@ -36,10 +35,9 @@ function getData(){
                 </div>
                 <div class = "media">                    
                     <div class="timer" id="${daysId}"></div>  
-                    <div class="steps">step : 1</div>
+                    <div class="steps">${api.projectStatus}</div>
                 </div>
             </button>
-            
         `;
           			
 
@@ -59,15 +57,11 @@ function getData(){
         addDate.innerHTML = diff_in_days+"j";
 
             const button = document.getElementById(`btn${api.id}`);
-            button.addEventListener('click', () => {
-              
-
-                // document.getElementById('edit_title').innerHTML = `Edit(${api.id})`;
+            button.addEventListener('click', () => {               
                 
-                // localStorage.setItem("client_id", api.id);
-                // localStorage.setItem("client_name", api.name);
+                localStorage.setItem("projectID", api.id);
                 
-                // window.location.href = 'service.html';
+                window.location.href = './project.html';
                 
 
             });

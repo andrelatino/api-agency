@@ -22,9 +22,11 @@ document.body.appendChild(closeBtn);
 var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
-<a href = 'javascript:logoutUser();'> Login-out </a>
-<a href = 'allstats.html'> See all stats </a>
-<a href = 'newproject.html'> Add new project </a>
+<a href = 'projects.html'> Projects </a>
+<a href = 'projects.html'> Managers </a>
+<a href = 'agencies.html'> Agencies </a>
+<a href = 'clients.html'> Clients </a>
+
 </div>
 `;
 popup.style.display = 'none';
@@ -46,5 +48,26 @@ function logoutUser() {
   localStorage.removeItem("authToken");
   window.location.href = './login.html'
 }
+
+// function showOfflineMessage() {
+//   if (!navigator.onLine) {
+//     const message = document.createElement('div');
+//     message.innerHTML = 'You are offline.';
+//     message.style.backgroundColor = 'red';
+//     message.style.color = 'white';
+//     message.style.padding = '10px';
+//     document.body.appendChild(message);
+    
+//   }else{
+//     const message = document.createElement('div');
+//     message.innerHTML = 'You are online.';
+//     message.style.backgroundColor = 'blue';
+//     message.style.color = 'white';
+//     message.style.padding = '10px';
+//     document.body.appendChild(message);
+    
+//   }
+// }
+// window.addEventListener('load', showOfflineMessage);
 
 

@@ -23,10 +23,7 @@ var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
 <a href = 'projects.html'> Projects </a>
-<a href = 'projects.html'> Managers </a>
 <a href = 'agencies.html'> Agencies </a>
-<a href = 'clients.html'> Clients </a>
-
 </div>
 `;
 popup.style.display = 'none';

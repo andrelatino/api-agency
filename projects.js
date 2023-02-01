@@ -59,10 +59,8 @@ function getData(){
             const button = document.getElementById(`btn${api.id}`);
             button.addEventListener('click', () => {         
             
-                
                 localStorage.setItem("projectID", api.id);
-                localStorage.setItem("projectRef", api.created_at);
-                localStorage.setItem("projectDeadline", diff_in_days);              
+                localStorage.setItem("projectRef", api.created_at); 
                 window.location.href = './project.html';
                 
 

@@ -60,6 +60,8 @@ function getData(){
 
             const button = document.getElementById(`btn${api.id}`);
             button.addEventListener('click', () => {
+
+                
               
 
                 // document.getElementById('edit_title').innerHTML = `Edit(${api.id})`;

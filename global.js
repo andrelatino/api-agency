@@ -24,6 +24,7 @@ popup.innerHTML = `
 <div id="popup">
 <a href = 'projects.html'> Projects </a>
 <a href = 'agencies.html'> Agencies </a>
+<a href = 'managers.html'> Managers </a>
 </div>
 `;
 popup.style.display = 'none';

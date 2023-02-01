@@ -7,11 +7,11 @@ function getData(){
     showProgressBar();
     
     // Fetch the JSON data and create the product elements as before
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/agency')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/user')
     .then(response => response.json())
     .then(data => {  
         
-        totalItems = data.agencies.length;
+        totalItems = data.managers.length;
         
 
         addTitle = document.getElementById('grid');
@@ -21,19 +21,19 @@ function getData(){
         
         const GridList = document.getElementById('grid');
 
-        for (const api of data.agencies) {
+        for (const api of data.managers) {
             const DivItems = document.createElement('div');
             DivItems.className = 'items';
             DivItems.innerHTML = `
             <button class="edit" id="btn${api.id}">                
                 <div class="content">                   
                     <p>ID : ${api.created_at}</p>
-                    <p>Name : ${api.name}</p>
-                    <p>Website : ${api.web}</p>
-                    <p>Manager : ${api.manager}</p>                                
-                </div>
+                    <p>Name : ${api.name} ${api.lastName}</p>
+                    <p>Email : ${api.email} </p>
+                    <p>Mobile : ${api.mobile}</p>                              
+            </div>
                 <div class = "media"> 
-                    <div class="timer">${api.project_id.length}</div>
+                    <div class="timer">${api.agency_id.length}</div>
                     <div class="steps">Project(s)</div>
                 </div>
             </button>

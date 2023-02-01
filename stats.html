@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Permissions-Policy" content="default-src 'none';">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#046afb"/>
+    <meta name="google" content="notranslate" />
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./stats.css">
+    <link rel="stylesheet" href="./global.css">
+  </head>
+
+  <body>
+    <header>
+      <div id="title">Stats</div> 
+    </header>
+    
+  </body>
+    <div id="g-progressbar">
+      <div class="g-progressbar-loading">
+        <div class="g-progressbar-inner-loading"></div>
+      </div>
+    </div>
+    <div id="grid">
+      <p id="refresh">Stats will refresh in <span id="countdown">60</span></p> 
+    </div>     
+  <footer>
+    <script src="./sw.js"></script>
+    <script src="./stats.js"></script>
+    <script src="./global.js"></script>  
+  </footer>
+</html>

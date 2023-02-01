@@ -22,6 +22,7 @@ document.body.appendChild(closeBtn);
 var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
+<a href = 'stats.html'> Stats </a>
 <a href = 'projects.html'> Projects </a>
 <a href = 'agencies.html'> Agencies </a>
 <a href = 'managers.html'> Managers </a>

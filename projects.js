@@ -28,14 +28,14 @@ function getData(){
             
             <button class="edit" id="btn${api.id}">                
                 <div class="content">                   
+                    <p>ID : ${api.created_at}</p>
                     <p class ='project'>PR : ${api.projectName} ${api.projectTech}</p>
-                    <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>                    
-                    <p>AG : ${api.agency[0].web}</p>
-                    <p>PM : ${api.agency[0].Manager}</p>                           
+                    <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>
+                    <p>AG : ${api.agency[0].web}</p>                           
                 </div>
                 <div class = "media">                    
                     <div class="timer" id="${daysId}"></div>  
-                    <div class="steps">${api.projectStatus}</div>
+                    <div class="steps">Status ${api.projectStatus}</div>
                 </div>
             </button>
         `;
@@ -52,15 +52,17 @@ function getData(){
         var diff_in_millisenconds = date_2 - date_1;
         var diff_in_days = diff_in_millisenconds / day_as_milliseconds;
         
-        console.log( diff_in_days );
+        // alert(diff_in_days)
         var addDate = document.getElementById(daysId);
         addDate.innerHTML = diff_in_days+"j";
 
             const button = document.getElementById(`btn${api.id}`);
-            button.addEventListener('click', () => {               
+            button.addEventListener('click', () => {         
+            
                 
                 localStorage.setItem("projectID", api.id);
-                
+                localStorage.setItem("projectRef", api.created_at);
+                localStorage.setItem("projectDeadline", diff_in_days);              
                 window.location.href = './project.html';
                 
 

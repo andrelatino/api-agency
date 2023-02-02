@@ -63,7 +63,9 @@ button#add-content {
 p#refresh {
     text-align: center;
     color: white;
+        margin: 0;
 }
+
 .items {
     display: grid;
     position: relative;
@@ -73,17 +75,25 @@ p#refresh {
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
 }
+  .items p {
+    margin: 0;
+}
   .item {
     display: grid;
+    padding: 15px;
     place-items: center;
-    background: white;
+    background: #003e99;
     border-radius: 10px;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%);
+    box-shadow: 2px 2px 0px #0000000d;
+    color: white;
 }
   p.numberStats {
       font-size: 7vw;
   }
-
+.profits.item {
+    background: yellow;
+    color: black;
+}
 div#botoncito {
     display: grid;
 }

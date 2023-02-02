@@ -1,4 +1,4 @@
-// document.cookie = "name=value; SameSite=None; Secure";
+document.cookie = "name=value; SameSite=None; Secure";
 let countdown = 60;
 
 const reloadPage = setInterval(function() {
@@ -32,22 +32,24 @@ function getData(){
         DivItems.className = 'items';
         DivItems.innerHTML = 
         `
-        <div class="item">
-            <p class="numberStats"> ${totalProject}</p>
-            <p class="titleStats"> Projects</p>
-        </div>
-        <div class="item">
+        
+        <div class="sales item">
             <p class="numberStats"> ${totalProjectBudget} $</p>
             <p class="titleStats"> Sales</p>
         </div>
-        <div class="item">
+        <div class="profits item">
+            <p class="numberStats"> ${totalExpenses} $</p>
+            <p class="titleStats"> Profits</p>
+        </div>
+        <div class="expenses item">
             <p class="numberStats"> ${totalProjectOffer} $</p>
             <p class="titleStats"> Expenses</p>
         </div>
-        <div class="item">
-            <p class="numberStats"> ${totalExpenses} $</p>
-            <p class="titleStats"> Profits</p>
-        </div>        
+        
+        <div class="projects item">
+            <p class="numberStats"> ${totalProject}</p>
+            <p class="titleStats"> Projects</p>
+        </div>     
         `;
 
         GridList.appendChild(DivItems);

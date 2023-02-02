@@ -23,10 +23,12 @@ function getData(){
         setInterval(hideProgressBar, 1000);
         
         const GridList = document.getElementById('grid');
-        const totalProjectBudget = data.stats.total_projectBudget;
-        const totalProjectOffer = data.stats.project_projectOffer;
+        const totalProjectBudget = data.projects.sales;
+        const totalProjectOffer = data.projects.expenses;
         const totalExpenses = totalProjectBudget-totalProjectOffer;
-        const totalProject = data.stats.project_total;
+        const totalProject = data.projects.total;
+        const totalAgencies = data.agencies.total;
+        const totalManagers = data.managers.total;
 
         const DivItems = document.createElement('div');
         DivItems.className = 'items';
@@ -49,7 +51,17 @@ function getData(){
         <div class="projects item">
             <p class="numberStats"> ${totalProject}</p>
             <p class="titleStats"> Projects</p>
-        </div>     
+        </div> 
+        
+        <div class="projects item">
+            <p class="numberStats"> ${totalAgencies}</p>
+            <p class="titleStats"> Agencies</p>
+        </div> 
+        
+        <div class="projects item">
+            <p class="numberStats"> ${totalManagers}</p>
+            <p class="titleStats"> Managers</p>
+        </div>   
         `;
 
         GridList.appendChild(DivItems);

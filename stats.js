@@ -1,13 +1,3 @@
-document.cookie = "name=value; SameSite=None; Secure";
-let countdown = 60;
-
-const reloadPage = setInterval(function() {
-    document.getElementById("countdown").innerHTML = --countdown;
-    if (countdown === 0) {
-        location.reload();
-        countdown = 60;
-    }
-}, 1000);
 
 window.onload = function() {
     getData();
@@ -20,6 +10,7 @@ function getData(){
     .then(response => response.json())
     .then(data => {  
       
+        countDown();
         setInterval(hideProgressBar, 1000);
         
         const GridList = document.getElementById('grid');
@@ -34,7 +25,9 @@ function getData(){
         DivItems.className = 'items';
         DivItems.innerHTML = 
         `
-        
+        <div id class="subtitle" >
+            <p id="counter">Update 60</p> 
+        </div>
         <div class="sales item">
             <p class="numberStats"> ${totalProjectBudget} $</p>
             <p class="titleStats"> Sales</p>
@@ -80,4 +73,15 @@ function showProgressBar() {
   const progressBar = document.getElementById('g-progressbar');
   progressBar.style.transition = 'opacity 0.5s ease-out';
   progressBar.style.opacity = 1;
+}
+
+function countDown(){
+    let countdown = 60;
+    const reloadPage = setInterval(function() {
+        document.getElementById("counter").innerHTML = "Update "+ --countdown;
+        if (countdown === 0) {
+            location.reload();
+            countdown = 60;
+        }
+    }, 1000);
 }

@@ -8,6 +8,9 @@
   margin: 0;
   height: 50px;
 }
+.subtitle{
+  padding: 10px;
+}
 .steps {
     padding: 10px;
     color: #ffffff70;

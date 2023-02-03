@@ -7,6 +7,7 @@ body {
     margin: 0;
     background-attachment: fixed;
     background-repeat: no-repeat;
+        background-size: cover;
 }
 .nav-style {
     position: fixed;
@@ -115,4 +116,10 @@ div#popup a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.subtitle{
+    grid-column: 1 / -1;
+    color:white;
+    margin-left: 15px; 
 }

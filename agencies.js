@@ -12,10 +12,8 @@ function getData(){
     .then(data => {  
         
         totalItems = data.agencies.length;
-        
-
-        addTitle = document.getElementById('grid');
-        addTitle.innerHTML= "<div class= 'titulo'>Total <span>("+totalItems+")</span></div>";
+        addSubtitle = document.getElementById('grid');
+        addSubtitle.innerHTML= "<div class='subtitle'><p> Total : "+totalItems+"</p></div>";
       
         setInterval(hideProgressBar, 1000);
         

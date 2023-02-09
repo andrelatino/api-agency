@@ -7,11 +7,11 @@ function getData(){
     showProgressBar();
     
     // Fetch the JSON data and create the product elements as before
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/agency')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/managers')
     .then(response => response.json())
     .then(data => {  
         
-        totalItems = data.agencies.length;
+        totalItems = data.managers.length;
         addSubtitle = document.getElementById('grid');
         addSubtitle.innerHTML= "<div class='subtitle'><p> Total : "+totalItems+"</p></div>";
       
@@ -19,19 +19,18 @@ function getData(){
         
         const GridList = document.getElementById('grid');
 
-        for (const api of data.agencies) {
+        for (const api of data.managers) {
             const DivItems = document.createElement('div');
             DivItems.className = 'items';
             DivItems.innerHTML = `
             <button class="edit" id="btn${api.id}">                
                 <div class="content">                   
-                    <p>ID : ${api.created_at}</p>
-                    <p>Name : ${api.name}</p>
-                    <p>Website : ${api.web}</p>
-                    <p>Manager : ${api.manager}</p>                                
-                </div>
+                    <p>Name : ${api.managerFirstname} ${api.managerLastname}</p>
+                    <p>Email : ${api.managerEmail} </p>
+                    <p>Mobile : ${api.managerPhone}</p>                              
+            </div>
                 <div class = "media"> 
-                    <div class="timer">${api.project_id.length}</div>
+                    <div class="timer">${api.projects_id.length}</div>
                     <div class="steps">Project(s)</div>
                 </div>
             </button>

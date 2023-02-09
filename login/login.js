@@ -1,9 +1,9 @@
-if (localStorage.getItem("authToken") !== null) {
-    window.location.href = './login.html';
-}
+// if (localStorage.getItem("authToken") !== null) {
+//     window.location.href = './login/';
+// }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js');
+  navigator.serviceWorker.register('../sw.js');
 }
 
 const loginForm = document.getElementById('formLogin');
@@ -14,11 +14,11 @@ loginForm.addEventListener('submit', (event) => {
   const email = loginForm.elements.email.value;
   const password = loginForm.elements.password.value;
   const body = {
-    email: email,
-    password: password,
+    managerEmail:email,
+    managerPassword:password,
   };
 
-  fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/auth/login', {
+  fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/auth/login', {
     method: 'POST',
     headers: {
       'accept': 'application/json',
@@ -39,7 +39,7 @@ loginForm.addEventListener('submit', (event) => {
         const authToken = data.authToken;
         localStorage.setItem('authToken', authToken);
         if (authToken) {
-          window.location.href = './home.html';
+          window.location.href = '../projects/';
           // alert ("You are logged");
         }
       });

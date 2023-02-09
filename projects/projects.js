@@ -7,40 +7,46 @@ function getData(){
     showProgressBar();
     
     // Fetch the JSON data and create the product elements as before
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/project')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/projects')
+    // fetch('./projects.json')
     .then(response => response.json())
     .then(data => {  
         
         totalProjects = data.projects.length;
+
         addSubtitle = document.getElementById('grid');
-        addSubtitle.innerHTML= "<div class='subtitle'><p> Total : "+totalProjects+"</p></div>";
+        addSubtitle.innerHTML= `
+        <div class='subtitle'>
+            <p> Total : ${totalProjects}</p>
+            <p> Filter </p>        
+        </div>`;
       
         setInterval(hideProgressBar, 1000);
         
         const GridList = document.getElementById('grid');
 
         for (const api of data.projects) {
-        var daysId = `days-${api.id}`;
-        const DivItems = document.createElement('div');
-        DivItems.className = 'items';
-        DivItems.innerHTML = `
-                
             
-            <button class="edit" id="btn${api.id}">                
-                <div class="content">                   
-                    <p>ID : ${api.created_at}</p>
-                    <p class ='project'>PR : ${api.projectName} ${api.projectTech}</p>
-                    <p class = 'budget'>CB : ${api.projectBudget}$ - AB : ${api.projectOffer}$</p>
-                    <p>AG : ${api.agency[0].web}</p>                           
-                </div>
-                <div class = "media">                    
-                    <div class="timer" id="${daysId}"></div>  
-                    <div class="steps">Status ${api.projectStatus}</div>
-                </div>
-            </button>
-        `;
-          			
-
+            var daysId = `days-${api.id}`;
+            const DivItems = document.createElement('div');
+            DivItems.className = 'items';
+            DivItems.innerHTML = `
+                <button class="edit" id="btn${api.id}">                
+                    <div class="content">                   
+                        
+                        
+                        <p>Service : ${api.service.serviceName}</p>
+                        <p>Tech : ${api.technology.technologyName}</p>
+                        <p>Budget : ${api.projectBudget}$</p>
+                        <p>Status : ${api.workflow.workflowName}</p>                        
+                        <p>Manager : ${api.manager.managerFirstname} ${api.manager.managerLastname}</p>                        
+                    </div>
+                    <div class = "media">                    
+                        <div class="timer" id="${daysId}"></div>
+                        <div class="steps">Day(s)</div>
+                    </div>
+                </button>
+            `;
         GridList.appendChild(DivItems);
 
         var today = new Date();
@@ -54,7 +60,7 @@ function getData(){
         
         // alert(diff_in_days)
         var addDate = document.getElementById(daysId);
-        addDate.innerHTML = diff_in_days+"j";
+        addDate.innerHTML = diff_in_days;
 
             const button = document.getElementById(`btn${api.id}`);
             button.addEventListener('click', () => {         

@@ -1,4 +1,4 @@
-var CACHE_VERSION = "v30";
+var CACHE_VERSION = "v31";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
@@ -9,43 +9,38 @@ self.addEventListener("install", (event) => {
                 "./manifest.json",
                 "./sw.js",
                 
-                "./512x512.png",
+                "./media/512x512.png",
                 "./bg1.svg",
                
                 "./index.html",
                 "./index.css",
                 "./index.js",
                
-                "./login.html",
-                "./login.css",
-                "./login.js",                
-                
                 "./global.css",
                 "./global.js",
+
+                "./login/login.html",
+                "./login/login.css",
+                "./login/login.js",                
                 
-                "./home.html",
-                "./home.js",
-                "./home.css",
+                "./projects/projects.html",
+                "./projects/projects.js",
+                "./projects/projects.css",
+                "./projects/project.html",
+                "./projects/project.js",
+                "./projects/project.css",
 
-                "./projects.html",
-                "./projects.js",
-                "./projects.css",
+                "./agencies/agencies.html",
+                "./agencies/agencies.js",
+                "./agencies/agencies.css",
 
-                "./project.html",
-                "./project.js",
-                "./project.css",
+                "./managers/managers.html",
+                "./managers/managers.js",
+                "./managers/managers.css",
 
-                "./agencies.html",
-                "./agencies.js",
-                "./agencies.css",
-
-                "./managers.html",
-                "./managers.js",
-                "./managers.css",
-
-                "./stats.html",
-                "./stats.js",
-                "./stats.css",
+                "./stats/stats.html",
+                "./stats/stats.js",
+                "./stats/stats.css",
 
 
                 "https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/project",

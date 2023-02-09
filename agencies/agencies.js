@@ -7,11 +7,11 @@ function getData(){
     showProgressBar();
     
     // Fetch the JSON data and create the product elements as before
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P/user')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/agencies')
     .then(response => response.json())
     .then(data => {  
         
-        totalItems = data.managers.length;
+        totalItems = data.agencies.length;
         addSubtitle = document.getElementById('grid');
         addSubtitle.innerHTML= "<div class='subtitle'><p> Total : "+totalItems+"</p></div>";
       
@@ -19,19 +19,23 @@ function getData(){
         
         const GridList = document.getElementById('grid');
 
-        for (const api of data.managers) {
+        for (const api of data.agencies) {
+
             const DivItems = document.createElement('div');
             DivItems.className = 'items';
             DivItems.innerHTML = `
+           
             <button class="edit" id="btn${api.id}">                
                 <div class="content">                   
-                    <p>ID : ${api.created_at}</p>
-                    <p>Name : ${api.name} ${api.lastName}</p>
-                    <p>Email : ${api.email} </p>
-                    <p>Mobile : ${api.mobile}</p>                              
-            </div>
+                    
+                    <p>Name : ${api.agencyName}</p>
+                    <p>Website : ${api.agencyWebsite}</p>
+                    <p>Manager : ${api.agencyManager}</p>
+                    <p>Country : ${api.agencyCountry}</p>
+                                                     
+                </div>
                 <div class = "media"> 
-                    <div class="timer">${api.agency_id.length}</div>
+                    <div class="timer">${api.projects_id.length}</div>
                     <div class="steps">Project(s)</div>
                 </div>
             </button>
@@ -41,7 +45,9 @@ function getData(){
         GridList.appendChild(DivItems);
 
             const button = document.getElementById(`btn${api.id}`);
-            button.addEventListener('click', () => {         
+            button.addEventListener('click', () => {     
+                
+                alert(api.id);
             
                 // localStorage.setItem("projectID", api.id);
                 // localStorage.setItem("projectRef", api.created_at); 

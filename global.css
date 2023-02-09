@@ -3,7 +3,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, blockquote, figur
 }
 body {
     background: #046afb;
-    background-image: url(bg1.svg);
+    background-image: url(./media/bg1.svg);
     margin: 0;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -22,6 +22,13 @@ body {
     border: none;
     
 }
+.navigation {
+    display: grid;
+    background: white;
+    grid-template-columns: 30px 1fr;
+    padding: 10px;
+    align-items: center;
+}
 .open-btn {
     background: #ffffff;
     color: #040404;
@@ -35,22 +42,28 @@ body {
     font-size: 17px;
     
 }
+div#popup img {
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+}
 div#popup {
     position: fixed;
     bottom: 95px;
     background: #b0b0b0;
-    width: 180px;
     height: auto;
     border-radius: 10px;
     right: 28px;
     display: grid;
     grid-gap: 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     overflow: hidden;
 }
 div#popup a {
     color: #010101;
     text-decoration: none;
-    padding: 15px;
+    padding: 10px 5px;
     background: white;
 }
 #versionBox {
@@ -118,8 +131,24 @@ div#popup a {
   align-items: center;
 }
 
-.subtitle{
+.subtitle {
     grid-column: 1 / -1;
-    color:white;
-    margin-left: 15px; 
+    color: white;
+    padding: 0px 15px;
+    display: flex;
+    place-content: space-between;
+}
+.content p {
+    display: grid;
+    margin: 1px;
+    text-align: left;
+    background:none!important;
+    padding: 3px!important;
+    color: white;
+    box-sizing: border-box;
+}
+.content {
+    position: relative;
+    padding: 15px;
+    background: #046afb
 }

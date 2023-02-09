@@ -1,11 +1,11 @@
 
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js');
+  navigator.serviceWorker.register('../sw.js');
 }
 
 if (localStorage.getItem("authToken") == null) {
-  window.location.href = './login.html';
+  window.location.href = '../login/';
 }
 
 /** NAV BOTTOM */
@@ -22,10 +22,31 @@ document.body.appendChild(closeBtn);
 var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
-<a href = 'stats.html'> Stats </a>
-<a href = 'projects.html'> Projects </a>
-<a href = 'agencies.html'> Agencies </a>
-<a href = 'managers.html'> Managers </a>
+  <div id="projects" class="navigation">
+      <img src="../media/projects.svg">
+      <a id = 'projects' href = '../projects/'> Projects </a>
+  </div>
+  <div id="managers" class="navigation">
+      <img src="../media/managers.svg">
+      <a id = 'managers' href = '../managers/'> Managers </a>
+  </div>
+  <div id="agencies" class="navigation">
+      <img src="../media/agencies.svg">
+      <a id = 'agencies' href = '../agencies/'> Agencies </a>
+  </div>
+  <div id="freelancers" class="navigation">
+      <img src="../media/freelancers.svg">
+      <a id = 'freelancers' href = '../freelancers/'> Freelancers </a>
+  </div>
+  <div id="earnings" class="navigation">
+      <img src="../media/earnings3.svg">
+      <a id = 'earnings' href = '../earnings/'> Earnings </a>
+  </div>
+  <div id="stats" class="navigation">
+      <img src="../media/stats3.svg">
+      <a id = 'stats' href = '../stats/'> Stats </a>
+  </div>
+  
 </div>
 `;
 popup.style.display = 'none';
@@ -45,7 +66,7 @@ closeBtn.addEventListener('click', function() {
 
 function logoutUser() {
   localStorage.removeItem("authToken");
-  window.location.href = './login.html'
+  window.location.href = '../login/'
 }
 
 // function showOfflineMessage() {

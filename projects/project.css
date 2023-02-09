@@ -65,28 +65,27 @@ p.title {
 }
 #grid {
     display: grid;
-    grid-template-columns: 1fr;
     padding: 33px;
-    place-content: center;
+
 }
-  .item {
-    border-bottom: 1px solid #ffffff78;
-  }
-  .item:last-child {
-     border-bottom: none!important; 
-  }
-  
 
 .items {
     display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(auto,301px));
     position: relative;
     overflow: hidden;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%);
+    grid-gap: 20px;
     color: white;
     padding: 33px;
+    place-content: space-evenly;
 }
+  .item{
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%);
+    padding:20px;
+    border-radius: 10px;
+  }
 div#botoncito {
     display: grid;
 }

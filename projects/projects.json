@@ -1,0 +1,148 @@
+{
+  "projects": [
+    {
+      "id": 4,
+      "created_at": 1674941308470,
+      "projectName": "Mobile App",
+      "projectTech": "PWA",
+      "projectBudget": 3000,
+      "projectStart": "2023-01-26",
+      "projectEnd": "2023-02-25",
+      "projectStatus": "to do",
+      "agency": {
+        "id": 6,
+        "created_at": 1675555615547,
+        "agencyName": "New Agency",
+        "agencyCountry": "Chile",
+        "agencyWebsite": "newagency.com",
+        "agencyManager": "Julia Meza",
+        "agencyEmail": "jm@newagency.com",
+        "agencyPhone": "+23232222222"
+      },
+      "manager": {
+        "id": 2,
+        "created_at": 1675553488888,
+        "managerFirstname": "André",
+        "managerLastname": "Meza",
+        "managerEmail": "andre.roussille@gmail.com",
+        "managerRole": "1",
+        "managerPhone": "+33658010822"
+      },
+      "customer": {
+        "id": 1,
+        "created_at": 1675677356472,
+        "customerFirstname": "Jhon",
+        "customerLastname": "Smith",
+        "customerRef": "upwork"
+      }
+    },
+    {
+      "id": 5,
+      "created_at": 1674942011608,
+      "projectName": "Mobile App",
+      "projectTech": "PWA",
+      "projectBudget": 5000,
+      "projectStart": "2023-01-28",
+      "projectEnd": "2023-01-29",
+      "projectStatus": "assigned",
+      "agency": {
+        "id": 3,
+        "created_at": 1675272532798,
+        "agencyName": "Web Agency",
+        "agencyCountry": "Colombia",
+        "agencyWebsite": "webagency.com",
+        "agencyManager": "Jose Mendoza",
+        "agencyEmail": "jm@webagency.com",
+        "agencyPhone": "+32987656876"
+      },
+      "manager": {
+        "id": 2,
+        "created_at": 1675553488888,
+        "managerFirstname": "André",
+        "managerLastname": "Meza",
+        "managerEmail": "andre.roussille@gmail.com",
+        "managerRole": "1",
+        "managerPhone": "+33658010822"
+      },
+      "customer": {
+        "id": 1,
+        "created_at": 1675677356472,
+        "customerFirstname": "Jhon",
+        "customerLastname": "Smith",
+        "customerRef": "upwork"
+      }
+    },
+    {
+      "id": 11,
+      "created_at": 1675157496447,
+      "projectName": "App Design",
+      "projectTech": "UX",
+      "projectBudget": 300,
+      "projectStart": "2023-02-18",
+      "projectEnd": "2023-02-11",
+      "projectStatus": "started",
+      "agency": {
+        "id": 3,
+        "created_at": 1675272532798,
+        "agencyName": "Web Agency",
+        "agencyCountry": "Colombia",
+        "agencyWebsite": "webagency.com",
+        "agencyManager": "Jose Mendoza",
+        "agencyEmail": "jm@webagency.com",
+        "agencyPhone": "+32987656876"
+      },
+      "manager": {
+        "id": 2,
+        "created_at": 1675553488888,
+        "managerFirstname": "André",
+        "managerLastname": "Meza",
+        "managerEmail": "andre.roussille@gmail.com",
+        "managerRole": "1",
+        "managerPhone": "+33658010822"
+      },
+      "customer": {
+        "id": 1,
+        "created_at": 1675677356472,
+        "customerFirstname": "Jhon",
+        "customerLastname": "Smith",
+        "customerRef": "upwork"
+      }
+    },
+    {
+      "id": 10,
+      "created_at": 1674993760046,
+      "projectName": "Web Design",
+      "projectTech": "UI/UX",
+      "projectBudget": 200,
+      "projectStart": "2023-01-29",
+      "projectEnd": "2023-01-31",
+      "projectStatus": "to do",
+      "agency": {
+        "id": 6,
+        "created_at": 1675555615547,
+        "agencyName": "New Agency",
+        "agencyCountry": "Chile",
+        "agencyWebsite": "newagency.com",
+        "agencyManager": "Julia Meza",
+        "agencyEmail": "jm@newagency.com",
+        "agencyPhone": "+23232222222"
+      },
+      "manager": {
+        "id": 2,
+        "created_at": 1675553488888,
+        "managerFirstname": "André",
+        "managerLastname": "Meza",
+        "managerEmail": "andre.roussille@gmail.com",
+        "managerRole": "1",
+        "managerPhone": "+33658010822"
+      },
+      "customer": {
+        "id": 1,
+        "created_at": 1675677356472,
+        "customerFirstname": "Jhon",
+        "customerLastname": "Smith",
+        "customerRef": "upwork"
+      }
+    }
+  ]
+}

@@ -22,6 +22,12 @@ document.body.appendChild(closeBtn);
 var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
+  <button class="user" onclick="logoutUser()">
+    <div id="user" class="navigation" style="grid-column: 1 / -1;">
+        <img src="../media/logout.svg">
+        <a id = 'projects' href = '../projects/'>Hi André R. </a>
+    </div>
+  </button>
   <div id="projects" class="navigation">
       <img src="../media/projects.svg">
       <a id = 'projects' href = '../projects/'> Projects </a>
@@ -39,7 +45,7 @@ popup.innerHTML = `
       <a id = 'freelancers' href = '../freelancers/'> Freelancers </a>
   </div>
   <div id="earnings" class="navigation">
-      <img src="../media/earnings3.svg">
+      <img src="../media/earnings2.svg">
       <a id = 'earnings' href = '../earnings/'> Earnings </a>
   </div>
   <div id="stats" class="navigation">

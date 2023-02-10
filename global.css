@@ -64,7 +64,6 @@ div#popup a {
     color: #010101;
     text-decoration: none;
     padding: 10px 5px;
-    background: white;
 }
 #versionBox {
     background-color: white;
@@ -151,4 +150,40 @@ div#popup a {
     position: relative;
     padding: 15px;
     background: #046afb
+}
+#title-grid {
+    font-size: 19px;
+    display: grid;
+    font-weight: 300;
+    margin-top: 20px;
+    color: white;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+div#title-content {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+div#title-content img {
+    filter: invert(1);
+}
+div#title-grid img {
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+}
+div#user {
+    background: #ebebeb;
+    font-size: 20px;
+}
+button.user {
+    display: grid;
+    grid-column: 1 / -1;
+    
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
 }

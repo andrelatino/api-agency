@@ -1,4 +1,13 @@
-
+#title {
+  font-size: 26px;
+  display: grid;
+  place-content: center;
+  font-weight: 300;
+  margin-top: 20px;
+  color: white;
+  margin: 0;
+  height: 50px;
+}
 .steps {
     padding: 10px;
     color: #ffffff70;

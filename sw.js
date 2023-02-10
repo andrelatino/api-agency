@@ -1,4 +1,4 @@
-var CACHE_VERSION = "v34";
+var CACHE_VERSION = "v35";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
@@ -9,7 +9,7 @@ self.addEventListener("install", (event) => {
                 "./manifest.json",
                 "./sw.js",
                 
-                "./media/512x512.png",
+                "./media/512.png",
                 "./media/bg1.svg",
                
                 "./index.html",

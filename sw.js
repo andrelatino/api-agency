@@ -1,4 +1,4 @@
-var CACHE_VERSION = "v36";
+var CACHE_VERSION = "v37";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
@@ -49,6 +49,15 @@ self.addEventListener("install", (event) => {
                 "./projects/index.html",
                 "./projects/projects.css",
                 "./projects/projects.js",
+
+                "./stats/index.html",
+                "./stats/stats.css",
+                "./stats/stats.js",
+
+                "https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/projects",
+                "https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/agencies",
+                "https://x8ki-letl-twmt.n7.xano.io/api:Gj5ATWME:v1/earnings",
+                "https://x8ki-letl-twmt.n7.xano.io/api:Gj5ATWME/stats",
 
             ])
         })

@@ -45,11 +45,11 @@ popup.innerHTML = `
       <a id = 'freelancers' href = '../freelancers/'> Freelancers </a>
   </div>
   <div id="earnings" class="navigation">
-      <img src="../media/earnings2.svg">
+      <img src="../media/earnings.svg">
       <a id = 'earnings' href = '../earnings/'> Earnings </a>
   </div>
   <div id="stats" class="navigation">
-      <img src="../media/stats3.svg">
+      <img src="../media/stats.svg">
       <a id = 'stats' href = '../stats/'> Stats </a>
   </div>
   

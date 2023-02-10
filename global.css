@@ -3,7 +3,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, blockquote, figur
 }
 body {
     background: #046afb;
-    background-image: url(./media/bg1.svg);
+    background-image: url(./media/background.svg);
     margin: 0;
     background-attachment: fixed;
     background-repeat: no-repeat;

@@ -1,4 +1,4 @@
-var CACHE_VERSION = "v37";
+var CACHE_VERSION = "v38";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event
@@ -58,7 +58,8 @@ self.addEventListener("install", (event) => {
                 "https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/agencies",
                 "https://x8ki-letl-twmt.n7.xano.io/api:Gj5ATWME:v1/earnings",
                 "https://x8ki-letl-twmt.n7.xano.io/api:Gj5ATWME/stats",
-
+                
+                
             ])
         })
     )
@@ -82,15 +83,15 @@ self.addEventListener("activate", (event) => {
 // Call fetch event
 self.addEventListener("fetch", (event) => {
     event.respondWith(
-        fetch(event.request)
-            .then(response => {
-                if (!response || response.status !== 200) {
-                    return caches.match(event.request);
+        fetch(event.request).catch(() => {
+            return caches.match(event.request).then((response) => {
+                if (response) {
+                    return response;
+                } 
+                else if (event.request.headers.get("accept").includes("text/html")) {
+                    return caches.match("./");
                 }
-                return response;
-            })
-            .catch(() => {
-                return caches.match(event.request);
-            })
+            });
+        })
     );
 });

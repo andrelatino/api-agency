@@ -22,7 +22,7 @@ document.body.appendChild(closeBtn);
 var popup = document.createElement('div');
 popup.innerHTML = `
 <div id="popup">
-  <button class="user" onclick="logoutUser()">
+  <button class="user">
     <div id="user" class="navigation" style="grid-column: 1 / -1;">
         <img src="../media/settings.svg">
         <a id = 'projects' href = '../projects/'>Hi André R. </a>

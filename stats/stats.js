@@ -6,7 +6,7 @@ function getData(){
     showProgressBar();
     
     // Fetch the JSON data and create the product elements as before
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:Gj5ATWME/stats')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/stats')
     .then(response => response.json())
     .then(data => {  
       
@@ -14,12 +14,15 @@ function getData(){
         setInterval(hideProgressBar, 1000);
         
         const GridList = document.getElementById('grid');
-        const totalProjectBudget = data.projects.sales;
-        const totalProjectOffer = data.projects.expenses;
+        
+        const totalProjectBudget = data.projects.budget;
+        const totalProjectOffer = data.agencies.budget;
         const totalExpenses = totalProjectBudget-totalProjectOffer;
         const totalProject = data.projects.total;
         const totalAgencies = data.agencies.total;
         const totalManagers = data.managers.total;
+        const totalCustomers = data.customers.total;
+        const totalFreelancers = data.freelancers.total;
 
         const DivItems = document.createElement('div');
         DivItems.className = 'items';
@@ -54,7 +57,15 @@ function getData(){
         <div class="projects item">
             <p class="numberStats"> ${totalManagers}</p>
             <p class="titleStats"> Managers</p>
-        </div>   
+        </div> 
+        <div class="projects item">
+            <p class="numberStats"> ${totalFreelancers}</p>
+            <p class="titleStats"> Freelancers</p>
+        </div>
+        <div class="projects item">
+            <p class="numberStats"> ${totalCustomers}</p>
+            <p class="titleStats"> Customers</p>
+        </div>      
         `;
 
         GridList.appendChild(DivItems);

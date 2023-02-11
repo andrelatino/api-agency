@@ -8,7 +8,7 @@ function getData(){
     
     // Fetch the JSON data and create the product elements as before
     // fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/projects')
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:Gj5ATWME:v1/earnings')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/earnings')
     .then(response => response.json())
     .then(data => {  
         
@@ -41,9 +41,9 @@ function getData(){
             const button = document.getElementById(`btn${api.id}`);
             button.addEventListener('click', () => {         
             
-                localStorage.setItem("projectID", api.id);
-                localStorage.setItem("projectRef", api.created_at); 
-                window.location.href = './project.html';
+                // localStorage.setItem("projectID", api.id);
+                // localStorage.setItem("projectRef", api.created_at); 
+                // window.location.href = './project.html';
 
             });
         }

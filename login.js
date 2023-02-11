@@ -3,7 +3,7 @@
 // }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../sw.js');
+  navigator.serviceWorker.register('./sw.js');
 }
 
 const loginForm = document.getElementById('formLogin');
@@ -39,7 +39,7 @@ loginForm.addEventListener('submit', (event) => {
         const authToken = data.authToken;
         localStorage.setItem('authToken', authToken);
         if (authToken) {
-          window.location.href = '../projects/';
+          window.location.href = './projects/';
           // alert ("You are logged");
         }
       });

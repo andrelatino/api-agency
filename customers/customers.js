@@ -7,11 +7,11 @@ function getData(){
     showProgressBar();
     
     // Fetch the JSON data and create the product elements as before
-    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/freelancers')
+    fetch('https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/customers')
     .then(response => response.json())
     .then(data => {  
         
-        totalItems = data.freelancers.length;
+        totalItems = data.customers.length;
         addSubtitle = document.getElementById('grid');
         addSubtitle.innerHTML= "<div class='subtitle'><p> Total : "+totalItems+"</p></div>";
       
@@ -19,21 +19,15 @@ function getData(){
         
         const GridList = document.getElementById('grid');
 
-        for (const api of data.freelancers) {
-
+        for (const api of data.customers) {
             const DivItems = document.createElement('div');
             DivItems.className = 'items';
             DivItems.innerHTML = `
-           
             <button class="edit" id="btn${api.id}">                
                 <div class="content">                   
-                    
-                    <p>Name : ${api.freelancerFirstname}</p>
-                    <p>Website : ${api.freelancerWebsite}</p>
-                    <p>Manager : ${api.freelancerEmail}</p>
-                    <p>Country : ${api.freelancerCountry}</p>
-                                                     
-                </div>
+                    <p>Name : ${api.customerFirstname} ${api.customerLastname}</p>
+                    <p>Ref : ${api.customerRef}</p>                             
+            </div>
                 <div class = "media"> 
                     <div class="timer">${api.projects_id.length}</div>
                     <div class="steps">Project(s)</div>
@@ -45,13 +39,11 @@ function getData(){
         GridList.appendChild(DivItems);
 
             const button = document.getElementById(`btn${api.id}`);
-            button.addEventListener('click', () => {     
-                
-                alert(api.id);
+            button.addEventListener('click', () => {         
             
                 // localStorage.setItem("projectID", api.id);
                 // localStorage.setItem("projectRef", api.created_at); 
-                // window.location.href = './freelancer.html';
+                // window.location.href = './agency.html';
                 
 
             });

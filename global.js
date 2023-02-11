@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
 }
 
 if (localStorage.getItem("authToken") == null) {
-  window.location.href = '../login/';
+  window.location.href = '../login.html';
 }
 
 /** NAV BOTTOM */
@@ -24,7 +24,7 @@ popup.innerHTML = `
 <div id="popup">
   <button class="user" onclick="logoutUser()">
     <div id="user" class="navigation" style="grid-column: 1 / -1;">
-        <img src="../media/logout.svg">
+        <img src="../media/settings.svg">
         <a id = 'projects' href = '../projects/'>Hi André R. </a>
     </div>
   </button>
@@ -44,9 +44,9 @@ popup.innerHTML = `
       <img src="../media/freelancers.svg">
       <a id = 'freelancers' href = '../freelancers/'> Freelancers </a>
   </div>
-  <div id="earnings" class="navigation">
-      <img src="../media/earnings.svg">
-      <a id = 'earnings' href = '../earnings/'> Earnings </a>
+  <div id="customers" class="navigation">
+      <img src="../media/customers.svg">
+      <a id = 'customers' href = '../customers/'> Customers </a>
   </div>
   <div id="stats" class="navigation">
       <img src="../media/stats.svg">
@@ -72,7 +72,7 @@ closeBtn.addEventListener('click', function() {
 
 function logoutUser() {
   localStorage.removeItem("authToken");
-  window.location.href = '../login/'
+  window.location.href = 'login.html'
 }
 
 // function showOfflineMessage() {

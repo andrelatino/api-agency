@@ -1,8 +1,5 @@
 if (localStorage.getItem("authToken") == null) {
-    window.location.href = './login/';
+    window.location.href = './login.html';
 }else{
     window.location.href = './projects/';
-}
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js');
 }

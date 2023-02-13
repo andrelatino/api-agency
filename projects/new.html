@@ -27,30 +27,91 @@
         </div>
       </div>
     </header>
-    <form id="add_form">    
-     
-      <div class="formItems">
-        <label for="agency">Agency</label>
-        <select name="cars" id="cars">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-      </div>
-      <div class="formItems">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required >
-      </div>
-      <div class="formItems">
-        <label for="description">Description</label>
-        <input type="text" id="description" name="desc" required >        
-      </div>
-      <div class="formItems">
-        <label for="price">Price</label>
-        <input type="number" id="price" name="price" required >
-      </div>     
-      <button type="submit" id="add_btn"  onclick="add_check_fields()">ADD NEW</button>     
+
+    <form id="projectForm">       
+        
+        <div class="projectFormItems">
+          <label for="projectBudget">Budget($)</label>
+          <input type="number" id="projectBudget" name="projectBudget" required >
+        </div>
+       
+        <div class="projectFormItems">
+          <label for="projectStart">Start</label>
+          <input type="date" id="projectStart" name="projectStart" required >        
+        
+        </div>
+        <div class="projectFormItems">
+          <label for="projectEnd">End</label>
+          <input type="date" id="projectEnd" name="projectEnd" required >
+        </div>
+        
+        <div class="projectFormItems">
+          <label for="agencies_id">Agency</label>
+          <select name="agencies_id" id="agencies_id">
+            <option value="">Select</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="projectFormItems">
+          <label for="managers_id">Manager</label>
+          <select name="managers_id" id="managers_id">
+            <option value="">Select</option>
+            <option value="2">2</option>            
+          </select>
+        </div>  
+
+        <div class="projectFormItems">
+          <label for="customers_id">Customer</label>
+          <select name="customers_id" id="customers_id">
+            <option value="">Select</option>
+            <option value="1">1</option>
+          </select>
+        </div>  
+
+        <div class="projectFormItems">
+          <label for="services_id">Service</label>
+          <select name="services_id" id="services_id">
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </div>  
+
+        <div class="projectFormItems">
+          <label for="technologies_id">Technology</label>
+          <select name="technologies_id" id="technologies_id">
+            <option value="">Select</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        
+        <div class="projectFormItems">
+          <label for="workflows_id">Workflow</label>
+          <select name="workflows_id" id="workflows_id">
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+      </div>  
+        
+        <button type="submit" id="add_btn"  onclick="checkEmptyFields()">ADD NEW</button> 
+        <script>
+          document.getElementById('projectForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+          });
+        </script>        
+        <p id = "formMessage"></p>  
     </form>
     
   </body>

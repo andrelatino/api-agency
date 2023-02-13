@@ -162,7 +162,9 @@ font-weight: 900px;
   font-weight: 200;
   
 }
-#add_form {
+/**FORM*/
+
+#projectForm{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(auto,280px));
   gap: 10px;
@@ -173,12 +175,12 @@ font-weight: 900px;
   padding: 35px;
   opacity: 0;
 }
-.formItems {
+.projectFormItems {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0px;
   background: white;
 }
-#add_form label {
+#projectForm label {
   background: #fafafa;
   padding: 10px;
   display: grid;
@@ -186,7 +188,7 @@ font-weight: 900px;
   font-size: 16px;
   border-bottom: 1px solid #c3c3c3;
 }
-#add_form input {
+#projectForm input {
   border: none;
   width: 100%;
   height: 33px;
@@ -202,10 +204,9 @@ select {
   background: #003d95;
   border: none;
   padding: 20px;
-  margin-top: 10px;
   color: white;
   font-weight: 900;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /*EDIT SIDEBAR*/
@@ -289,4 +290,18 @@ p#plogout {
 }
 p#hiAdmin {
     text-align: center;
+}
+
+@media screen and (max-width: 640px){
+  #projectForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 12px;
+    text-transform: capitalize;
+    place-content: center;
+    color: white;
+    padding: 15px;
+    opacity: 0;
+  }
 }

@@ -18,7 +18,7 @@ function getData(){
         addSubtitle.innerHTML= `
         <div class='subtitle'>
             <p> Total : ${totalProjects}</p>
-            <p> Filter </p>        
+            <a class="addNew" href='./new.html' > + </a>         
         </div>`;
       
         setInterval(hideProgressBar, 1000);

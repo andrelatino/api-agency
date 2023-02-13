@@ -135,7 +135,7 @@ div#popup a {
     color: white;
     padding: 0px 15px;
     display: flex;
-    place-content: space-between;
+    grid-gap: 20px;
 }
 .content p {
     display: grid;
@@ -186,4 +186,19 @@ button.user {
     background: none;
     margin: 0;
     padding: 0;
+}
+a.addNew {
+    display: grid;
+    background: #003d95;
+    border: none;
+    color: white;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
 }

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Permissions-Policy" content="default-src 'none';">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#046afb"/>
+    <meta name="google" content="notranslate" />
+    <link rel="manifest" href="../manifest.json">    
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./new.css">
+  </head>
+
+  <body>
+    <header>
+      <div id="title-grid" class="title">
+        <div id="title-content">
+          <img src="../media/projects.svg">
+          <h2>New Project</h2>
+        </div>
+      </div>
+      <div id="subtitle" class="subtitle"></div>
+      <div id="g-progressbar">
+        <div class="g-progressbar-loading">
+          <div class="g-progressbar-inner-loading"></div>
+        </div>
+      </div>
+    </header>
+    <form id="add_form">    
+     
+      <div class="formItems">
+        <label for="agency">Agency</label>
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class="formItems">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required >
+      </div>
+      <div class="formItems">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="desc" required >        
+      </div>
+      <div class="formItems">
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" required >
+      </div>     
+      <button type="submit" id="add_btn"  onclick="add_check_fields()">ADD NEW</button>     
+    </form>
+    
+  </body>
+    <div id="grid" class="grid"></div>     
+  <footer>
+    <script src="../sw.js"></script>    
+    <script src="../global.js"></script>
+    <script src="./new.js"></script>
+  </footer>
+</html>

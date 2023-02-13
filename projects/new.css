@@ -293,7 +293,7 @@ p#hiAdmin {
 }
 
 @media screen and (max-width: 640px){
-  #projectForm {
+  #projectForm  {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -301,7 +301,15 @@ p#hiAdmin {
     text-transform: capitalize;
     place-content: center;
     color: white;
-    padding: 15px;
+    padding: 20px;
     opacity: 0;
   }
+}
+
+input[type=number],
+input[type=select],
+input[type=date]
+{
+  padding: 0 20px!important;
+  box-sizing: border-box;
 }

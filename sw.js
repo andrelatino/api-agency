@@ -1,4 +1,4 @@
-var CACHE_VERSION = "v43";
+var CACHE_VERSION = "v44";
 var CACHE = "neo-manager-" + CACHE_VERSION;
 
 // Call install event

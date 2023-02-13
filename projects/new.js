@@ -67,7 +67,5 @@ function checkEmptyFields() {
     // alert('All fields are filled');
     addNewContent();
 
-  } else {
-    alert('All fields are mandatory');
-  }
+  } 
 }

@@ -17,8 +17,7 @@ function getData(){
         addSubtitle = document.getElementById('grid');
         addSubtitle.innerHTML= `
         <div class='subtitle'>
-            <p> Total : ${totalProjects}</p>
-            <a class="addNew" href='./new.html' > + </a>         
+            <p> Total : ${totalProjects}</p>    
         </div>`;
       
         setInterval(hideProgressBar, 1000);
@@ -87,3 +86,21 @@ function showProgressBar() {
   progressBar.style.transition = 'opacity 0.5s ease-out';
   progressBar.style.opacity = 1;
 }
+
+function addEditButton() {
+    // create a button element
+    const editButton = document.createElement("button");
+    editButton.textContent = "Add";
+    editButton.className = "editBtn";
+
+    // append the button to the footer element
+    const footer = document.querySelector("footer");
+    footer.appendChild(editButton);
+
+    // add a click event listener to the button
+    editButton.addEventListener("click", function() {
+        window.location.href = "./new.html";
+    });
+
+  }
+  addEditButton();

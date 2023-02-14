@@ -101,3 +101,4 @@ function showProgressBar() {
   progressBar.style.transition = 'opacity 0.5s ease-out';
   progressBar.style.opacity = 1;
 }
+

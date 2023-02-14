@@ -32,7 +32,7 @@ body {
 .open-btn {
     background: #ffffff;
     color: #040404;
-    font-size: 30px;
+    font-size: 16px;
 }
 .close-btn {  
     background: #002a68;
@@ -201,4 +201,7 @@ a.addNew {
     padding: 0;
     vertical-align: middle;
     text-align: center;
+}
+#grid{
+    margin-bottom: 120px;
 }

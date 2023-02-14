@@ -266,3 +266,18 @@ p#plogout {
 p#hiAdmin {
     text-align: center;
 }
+button.editBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 110px;
+  padding: 20px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-content: center;
+  border: none;
+  background: #003d95;
+  color: white;
+  font-size: 16px;
+}

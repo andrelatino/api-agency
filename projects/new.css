@@ -316,3 +316,9 @@ input[type=date]
   box-sizing: border-box;
   outline: none;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 100%;
+  position: absolute;
+  background: transparent;
+}

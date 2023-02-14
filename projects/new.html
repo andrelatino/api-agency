@@ -28,7 +28,14 @@
       </div>
     </header>
 
-    <form id="projectForm" lang="es">       
+    <form id="projectForm" lang="es">
+
+      <div class="projectFormItems">
+        <label for="customers_id">Customer</label>
+        <select name="customers_id" id="customers_id" required>
+          <option value="">Select</option>
+        </select>
+      </div>  
         
         <div class="projectFormItems">
           <label for="projectBudget">Budget($)</label>
@@ -44,44 +51,32 @@
           <label for="projectEnd">End</label>
           <input type="date" id="projectEnd" name="projectEnd" placeholder="yyyy-mm-dd" lang="en" required >
         </div>
+
+        <div class="projectFormItems">
+          <label for="freelancers_id">Freelancer</label>
+          <select name="freelancers_id" id="freelancers_id" required>
+            <option value="">Select</option>
+          </select>
+        </div>
         
         <div class="projectFormItems">
           <label for="agencies_id">Agency</label>
           <select name="agencies_id" id="agencies_id" required>
-            <option value="">Select</option>
-            <option value="3">3</option>
-            <option value="6">6</option>
+            <option  value="">Select</option>
           </select>
         </div>
 
         <div class="projectFormItems">
           <label for="managers_id">Manager</label>
           <select name="managers_id" id="managers_id" required>
-            <option value="">Select</option>
-            <option value="2">2</option>            
+            <option value="">Select</option>      
           </select>
-        </div>  
-
-        <div class="projectFormItems">
-          <label for="customers_id">Customer</label>
-          <select name="customers_id" id="customers_id" required>
-            <option value="">Select</option>
-            <option value="1">1</option>
-          </select>
-        </div>  
+        </div>
 
         <div class="projectFormItems">
           <label for="services_id">Service</label>
           <select name="services_id" id="services_id" required>
             <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
           </select>
         </div>  
 
@@ -89,8 +84,6 @@
           <label for="technologies_id">Technology</label>
           <select name="technologies_id" id="technologies_id" required>
             <option value="">Select</option>
-            <option value="3">3</option>
-            <option value="6">6</option>
           </select>
         </div>
         
@@ -98,10 +91,6 @@
           <label for="workflows_id">Workflow</label>
           <select name="workflows_id" id="workflows_id" required>
             <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
           </select>
       </div>  
         

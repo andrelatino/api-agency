@@ -285,7 +285,12 @@ span.tiny {
   font-size: 12px;
 }
 img.serviceIcon {
-  height: 64px;
-  width: 64px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+img.addIcon {
+  height: 50px;
+  width: 50px;
   object-fit: cover;
 }

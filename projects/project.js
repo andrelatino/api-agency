@@ -28,9 +28,20 @@ function getData(){
       addSubtitle = document.getElementById('grid');
       addSubtitle.innerHTML= `
       <div class='subtitle'>
+          <p> Edit </p>
+          <button id="edit"><img class='addIcon' src="../media/Edit.svg"></button>
           <p> Delete </p>
-          <a class="addNew" href='./new.html' > + </a>     
+          <button id="delete"><img class='addIcon' src="../media/Delete.svg"></button>
+          <p id='message'></p>               
       </div>`;
+
+      // Get the button element by ID
+      const deleteButton = document.getElementById("delete");
+
+      // Add a click event listener to the button
+      deleteButton.addEventListener("click", function() {
+        deleteProject();
+      });
 
         const filteredProjects = data.projects.filter(projects => projects.id === projectID);
         console.log(filteredProjects);
@@ -109,3 +120,28 @@ function showProgressBar() {
   progressBar.style.opacity = 1;
 }
 
+function deleteProject() {
+
+  document.getElementById('message').textContent = 'Deleting';
+  const data = {projects_id: projectID};
+  
+  fetch(`https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/projects/${projectID}`, {
+    method: 'DELETE',
+    headers: {
+      'accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.status === 200) {
+      // Update the text of the message element to "deleted"
+      document.getElementById('message').textContent = 'Succes!';
+    } else {
+      throw new Error(`Error: ${response.status}`);
+    }
+  })
+  .catch(error => {
+    document.getElementById('message').textContent = 'Failed';
+  });
+} 

@@ -138,6 +138,18 @@ font-weight: 900px;
     place-content: space-evenly;
     
   }
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    grid-gap: 20px;
+    color: white;
+    padding: 0px;
+    place-content: space-evenly;
+  } 
   img.image {
     object-fit: cover;
     width: 100%;
@@ -289,4 +301,39 @@ p#plogout {
 }
 p#hiAdmin {
     text-align: center;
+}
+button#delete {
+  display: grid;
+  background: #003d95;
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  place-content: center;
+}
+button#edit {
+  display: grid;
+  background: #003d95;
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  place-content: center;
+}
+img.addIcon {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  padding: 7px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 50%;
 }

@@ -281,3 +281,11 @@ button.editBtn {
   color: white;
   font-size: 16px;
 }
+span.tiny {
+  font-size: 12px;
+}
+img.serviceIcon {
+  height: 64px;
+  width: 64px;
+  object-fit: cover;
+}

@@ -17,7 +17,8 @@ function getData(){
         addSubtitle = document.getElementById('grid');
         addSubtitle.innerHTML= `
         <div class='subtitle'>
-            <p> Total : ${totalProjects}</p>    
+            <p> Total : ${totalProjects}</p>
+            <a class="addNew" href='./new.html' > + </a>     
         </div>`;
       
         setInterval(hideProgressBar, 1000);
@@ -33,16 +34,18 @@ function getData(){
                 <button class="edit" id="btn${api.id}">                
                     <div class="content">                   
                         
-                        
+                        <p>ID : ${api.id}</p>
                         <p>Service : ${api.service.serviceName}</p>
-                        <p>Tech : ${api.technology.technologyName}</p>
                         <p>Budget : ${api.projectBudget}$</p>
                         <p>Status : ${api.workflow.workflowName}</p>                        
                         <p>Manager : ${api.manager.managerFirstname} ${api.manager.managerLastname}</p>                        
                     </div>
                     <div class = "media">                    
-                        <div class="timer" id="${daysId}"></div>
-                        <div class="steps">Day(s)</div>
+                            <div class="timer" id="${daysId}"></div>
+                        <div class='icons'>
+                            <img class='serviceIcon' src="../media/${api.service.serviceName}.svg">                            
+                        </div>
+                        
                     </div>
                 </button>
             `;
@@ -59,7 +62,7 @@ function getData(){
         
         // alert(diff_in_days)
         var addDate = document.getElementById(daysId);
-        addDate.innerHTML = diff_in_days;
+        addDate.innerHTML = diff_in_days+"<span class='tiny'> Days</span>";
 
             const button = document.getElementById(`btn${api.id}`);
             button.addEventListener('click', () => {         
@@ -86,21 +89,3 @@ function showProgressBar() {
   progressBar.style.transition = 'opacity 0.5s ease-out';
   progressBar.style.opacity = 1;
 }
-
-function addEditButton() {
-    // create a button element
-    const editButton = document.createElement("button");
-    editButton.textContent = "Add";
-    editButton.className = "editBtn";
-
-    // append the button to the footer element
-    const footer = document.querySelector("footer");
-    footer.appendChild(editButton);
-
-    // add a click event listener to the button
-    editButton.addEventListener("click", function() {
-        window.location.href = "./new.html";
-    });
-
-  }
-  addEditButton();

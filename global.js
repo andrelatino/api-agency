@@ -10,7 +10,7 @@ if (localStorage.getItem("authToken") == null) {
 
 /** NAV BOTTOM */
 var openBtn = document.createElement('button');
-openBtn.innerHTML = 'Menu';
+openBtn.innerHTML = '<img id= "menu" src="../media/menu.svg">';
 openBtn.className = 'nav-style open-btn';
 document.body.appendChild(openBtn);
 

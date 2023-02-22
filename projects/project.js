@@ -25,6 +25,13 @@ function getData(){
     .then(response => response.json())
     .then(data => {  
 
+      addSubtitle = document.getElementById('grid');
+      addSubtitle.innerHTML= `
+      <div class='subtitle'>
+          <p> Delete </p>
+          <a class="addNew" href='./new.html' > + </a>     
+      </div>`;
+
         const filteredProjects = data.projects.filter(projects => projects.id === projectID);
         console.log(filteredProjects);
       

@@ -205,3 +205,8 @@ a.addNew {
 #grid{
     margin-bottom: 120px;
 }
+img#menu {
+    object-fit: cover;
+    height: 35px;
+    width: 35px;
+}

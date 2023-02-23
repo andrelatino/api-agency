@@ -13,6 +13,10 @@ function getData(){
     .then(data => {  
         
         totalProjects = data.projects.length;
+        if (totalProjects==0){
+              addImageToCenter('../media/walking.svg','noProject');
+
+        }
 
         addSubtitle = document.getElementById('grid');
         addSubtitle.innerHTML= `
@@ -90,3 +94,24 @@ function showProgressBar() {
   progressBar.style.transition = 'opacity 0.5s ease-out';
   progressBar.style.opacity = 1;
 }
+
+function addImageToCenter(imageUrl, id) {
+    // create a new image element
+    const imageElement = document.createElement('img');
+    
+    // set the source attribute to the provided URL
+    imageElement.src = imageUrl;
+    imageElement.id = id;
+    // set the CSS styles to center the image
+    imageElement.style.position = 'absolute';
+    imageElement.style.top = '50%';
+    imageElement.style.left = '50%';
+    imageElement.style.width = '100%';
+    imageElement.style.maxWidth = '600px';
+    imageElement.style.transform = 'translate(-50%, -50%)';
+
+  
+    // add the image element to the body of the document
+    document.body.appendChild(imageElement);
+  }
+  

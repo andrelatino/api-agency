@@ -27,20 +27,26 @@ function getData(){
 
       addSubtitle = document.getElementById('grid');
       addSubtitle.innerHTML= `
-      <div class='subtitle'>
-          <p> Edit </p>
-          <button id="edit"><img class='addIcon' src="../media/Edit.svg"></button>
-          <p> Delete </p>
-          <button id="delete"><img class='addIcon' src="../media/Delete.svg"></button>
-          <p id='message'></p>               
-      </div>`;
+      <div class='subtitle'>          
+          <button id="edit"><img class='addIcon' src="../media/Edit.svg"></button>          
+          <button id="delete"><img class='addIcon' src="../media/Delete.svg"></button>          
+          <button id="add"><img class='addIcon' src="../media/plus.svg"></button>                        
+      </div>
+      `;
 
       // Get the button element by ID
       const deleteButton = document.getElementById("delete");
-
-      // Add a click event listener to the button
       deleteButton.addEventListener("click", function() {
+        
+        openModal();
         deleteProject();
+
+      });
+
+      // Get the button element by ID
+      const addButton = document.getElementById("add");
+      addButton.addEventListener("click", function() {
+        window.location.href = './new.html';
       });
 
         const filteredProjects = data.projects.filter(projects => projects.id === projectID);
@@ -137,6 +143,8 @@ function deleteProject() {
     if (response.status === 200) {
       // Update the text of the message element to "deleted"
       document.getElementById('message').textContent = 'Succes!';
+      window.location.href = './';
+
     } else {
       throw new Error(`Error: ${response.status}`);
     }
@@ -145,3 +153,44 @@ function deleteProject() {
     document.getElementById('message').textContent = 'Failed';
   });
 } 
+
+
+function openModal() {
+
+  // create the modal overlay
+  var overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  overlay.style.zIndex = 9999;
+
+  // create the modal content
+  var modal = document.createElement('div');
+  modal.style.position = 'absolute';
+  modal.style.width = '200px';
+  modal.style.height = '200px';
+  modal.style.top = '50%';
+  modal.style.left = '50%';
+  modal.style.transform = 'translate(-50%, -50%)';
+  modal.style.backgroundColor = 'white';
+  modal.style.padding = '20px';
+  modal.style.borderRadius = '5px';
+  modal.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.5)';
+  modal.style.zIndex = 10000;
+  modal.innerHTML = `
+        
+    <p id='message'></p>                   
+
+
+  `;
+
+  // add the modal content to the overlay
+  overlay.appendChild(modal);
+
+  // add the overlay to the document body
+  document.body.appendChild(overlay);
+}
+

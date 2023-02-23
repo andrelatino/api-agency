@@ -59,6 +59,7 @@ div#popup {
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
+    z-index: 99;
 }
 div#popup a {
     color: #010101;

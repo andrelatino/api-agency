@@ -38,8 +38,9 @@ function getData(){
       const deleteButton = document.getElementById("delete");
       deleteButton.addEventListener("click", function() {
         
-        openModal();
+        
         deleteProject();
+
 
       });
 
@@ -128,7 +129,9 @@ function showProgressBar() {
 
 function deleteProject() {
 
-  document.getElementById('message').textContent = 'Deleting';
+  openModal();
+
+  // document.getElementById('message').textContent = 'Deleting';
   const data = {projects_id: projectID};
   
   fetch(`https://x8ki-letl-twmt.n7.xano.io/api:rrdh6N4P:v1/projects/${projectID}`, {
@@ -142,21 +145,24 @@ function deleteProject() {
   .then(response => {
     if (response.status === 200) {
       // Update the text of the message element to "deleted"
-      document.getElementById('message').textContent = 'Succes!';
-      window.location.href = './';
+      // document.getElementById('message').textContent = 'Succes!';
+      showCheckmark();
+      
+      // window.location.href = './';
 
     } else {
       throw new Error(`Error: ${response.status}`);
     }
   })
   .catch(error => {
-    document.getElementById('message').textContent = 'Failed';
+    // document.getElementById('message').textContent = 'Failed';
   });
 } 
 
 
 function openModal() {
 
+  
   // create the modal overlay
   var overlay = document.createElement('div');
   overlay.style.position = 'fixed';
@@ -170,19 +176,28 @@ function openModal() {
   // create the modal content
   var modal = document.createElement('div');
   modal.style.position = 'absolute';
-  modal.style.width = '200px';
-  modal.style.height = '200px';
+  modal.style.width = '100px';
+  modal.style.height = '100px';
   modal.style.top = '50%';
   modal.style.left = '50%';
   modal.style.transform = 'translate(-50%, -50%)';
-  modal.style.backgroundColor = 'white';
-  modal.style.padding = '20px';
-  modal.style.borderRadius = '5px';
   modal.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.5)';
   modal.style.zIndex = 10000;
   modal.innerHTML = `
         
-    <p id='message'></p>                   
+  <div class="center">
+  <div id='holder'>
+    <div id="spinner">
+     <div class="spinner"></div>
+    </div>
+    <div id ="checkmark">
+      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+      </svg>
+    </div>
+  </div>  
+</div>          
 
 
   `;
@@ -194,3 +209,14 @@ function openModal() {
   document.body.appendChild(overlay);
 }
 
+
+function showCheckmark() {
+  var checkmark = document.getElementById("checkmark");
+  checkmark.style.display = "grid"; // Change to inline-block
+  var spinner = document.getElementById("spinner");
+  spinner.style.display = "none"; // Hide the spinner
+
+  window.setTimeout(function(){   
+     window.location.href = './';
+  }, 1500);
+}

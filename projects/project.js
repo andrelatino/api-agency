@@ -67,19 +67,19 @@ function getData(){
             
             <div id="project" class="item">   
                 <p class = title>Project details</p> 
-                <p>ID : ${api.created_at}</p>
+                <p>ID : ${api.id}</p>
+                <p>Ref : ${api.created_at}</p>
                 <p>Budget : ${api.projectBudget}$</p>
-                <p>Type : ${api.projectName}</p>
-                <p>Technology : ${api.projectTech}</p>
                 <p>Start : ${api.projectStart}</p>
                 <p>End : ${api.projectEnd}</p>
-                <p>Status : ${api.projectStatus}</p>
-
+                <p>Service : ${api.service.serviceName}</p>
+                <p>Technology : ${api.technology.technologyName}</p>               
+                <p>Status : ${api.workflow.workflowName}</p>
             </div>             
             <div id="agency" class="item">
                 <p class = title>Agency assigned</p>
-                <p>ID : ${api.agency.created_at}</p>
-                <p>ID : ${api.agency.agencyBudget}</p>
+                <p>ID : ${api.agency.id}</p>
+                <p>Ref : ${api.agency.created_at}</p>
                 <p>Name : ${api.agency.agencyName}</p>
                 <p>Country : ${api.agency.agencyCountry}</p>
                 <p>Website : ${api.agency.agencyWebsite}</p>
@@ -90,7 +90,8 @@ function getData(){
             </div>  
             <div id="projectManager details" class="item">
                 <p class = title>Project manager</p>
-                <p>ID : ${api.manager.created_at}</p>
+                <p>ID : ${api.manager.id}</p>
+                <p>Ref : ${api.manager.created_at}</p>
                 <p>Email : ${api.manager.managerEmail}</p>
                 <p>Name : ${api.manager.managerFirstname} ${api.manager.managerLastname}</p> 
                 <p>Phone : ${api.manager.managerPhone}</p>
@@ -99,6 +100,7 @@ function getData(){
             </div>
             <div id="projectManager details" class="item">
                 <p class = title>Customer details</p>
+                <p>ID : ${api.customer.id}</p>
                 <p>ID : ${api.customer.created_at}</p>
                 <p>Name : ${api.customer.customerFirstname} ${api.customer.customerLastname}</p>
                 <p>Ref : ${api.customer.customerRef}</p>

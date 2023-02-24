@@ -76,6 +76,8 @@ const selectManagers = document.querySelector('#managers_id');
 const selectServices = document.querySelector('#services_id');
 const selectTechnologies = document.querySelector('#technologies_id');
 const selectWorkflows = document.querySelector('#workflows_id');
+const selectTeams = document.querySelector('#teams_id');
+const selectAffiliates = document.querySelector('#affiliates_id');
 
 fetch('https://x8ki-letl-twmt.n7.xano.io/api:Nwul72Uo:v1/projects')
   .then(response => response.json())
@@ -130,5 +132,31 @@ fetch('https://x8ki-letl-twmt.n7.xano.io/api:Nwul72Uo:v1/projects')
         selectWorkflows.appendChild(option);
       });
 
+      data.teams.forEach(team => {
+        const option = document.createElement('option');
+        option.value = team.id;
+        option.textContent = team.teamFirstname;
+        selectTeams.appendChild(option);
+      });
+
+      data.affiliates.forEach(affiliate => {
+        const option = document.createElement('option');
+        option.value = affiliate.id;
+        option.textContent = affiliate.affiliateFirstname;
+        selectAffiliates.appendChild(option);
+      });
+
   })
   .catch(error => console.error('Error fetching data:', error));
+
+  function getCurrentDate() {
+    const currentDate = new Date();
+  
+    const year = currentDate.getFullYear();
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    const day = currentDate.getDate().toString().padStart(2, '0');
+  
+    return `${year}-${month}-${day}`;
+  }
+  
+  document.getElementById("projectStart").value = getCurrentDate();

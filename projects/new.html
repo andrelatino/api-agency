@@ -44,12 +44,33 @@
        
         <div class="projectFormItems">
           <label for="projectStart">Start</label>
-          <input type="date" id="projectStart" name="projectStart" timezone="Z" required >        
+          <input type="date" id="projectStart" name="projectStart" lang="en" timezone="Z" required >
         
         </div>
         <div class="projectFormItems">
           <label for="projectEnd">End</label>
           <input type="date" id="projectEnd" name="projectEnd" lang="en" timezone="Z" required>
+        </div>
+
+        <div class="projectFormItems">
+          <label for="managers_id">Manager</label>
+          <select name="managers_id" id="managers_id" required>
+            <option value="">Select</option>      
+          </select>
+        </div>
+
+        <div class="projectFormItems">
+          <label for="teams_id">Team</label>
+          <select name="teams_id" id="teams_id" required>
+            <option value="">Select</option>
+          </select>
+        </div>  
+
+        <div class="projectFormItems">
+          <label for="agencies_id">Agency</label>
+          <select name="agencies_id" id="agencies_id" required>
+            <option  value="">Select</option>
+          </select>
         </div>
 
         <div class="projectFormItems">
@@ -59,19 +80,7 @@
           </select>
         </div>
         
-        <div class="projectFormItems">
-          <label for="agencies_id">Agency</label>
-          <select name="agencies_id" id="agencies_id" required>
-            <option  value="">Select</option>
-          </select>
-        </div>
-
-        <div class="projectFormItems">
-          <label for="managers_id">Manager</label>
-          <select name="managers_id" id="managers_id" required>
-            <option value="">Select</option>      
-          </select>
-        </div>
+              
 
         <div class="projectFormItems">
           <label for="services_id">Service</label>
@@ -92,7 +101,14 @@
           <select name="workflows_id" id="workflows_id" required>
             <option value="">Select</option>
           </select>
-      </div>  
+        </div> 
+
+        <div class="projectFormItems">
+          <label for="affiliates_id">Affiliate</label>
+          <select name="affiliates_id" id="affiliates_id" required>
+            <option value="">Select</option>
+          </select>
+        </div>  
         
         <button type="submit" id="add_btn"  onclick="checkEmptyFields()">ADD NEW</button> 
         <script>

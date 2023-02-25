@@ -31,86 +31,94 @@
     <form id="projectForm" lang="es">
 
       <div class="projectFormItems">
-        <label for="customers_id">Customer</label>
+        <label class="required" for="customers_id">Customer *</label>
         <select name="customers_id" id="customers_id" required>
           <option value="">Select</option>
         </select>
       </div>  
         
         <div class="projectFormItems">
-          <label for="projectBudget">Budget($)</label>
+          <label class="required" for="projectBudget">Budget($) *</label>
           <input type="number" id="projectBudget" name="projectBudget" required >
         </div>
        
         <div class="projectFormItems">
-          <label for="projectStart">Start</label>
+          <label class="required" for="projectStart">Start *</label>
           <input type="date" id="projectStart" name="projectStart" lang="en" timezone="Z" required >
         
         </div>
         <div class="projectFormItems">
-          <label for="projectEnd">End</label>
+          <label class="required" for="projectEnd">End *</label>
           <input type="date" id="projectEnd" name="projectEnd" lang="en" timezone="Z" required>
         </div>
 
         <div class="projectFormItems">
-          <label for="managers_id">Manager</label>
+          <label class="required" for="managers_id">Manager *</label>
           <select name="managers_id" id="managers_id" required>
             <option value="">Select</option>      
           </select>
         </div>
 
-        <div class="projectFormItems">
-          <label for="teams_id">Team</label>
-          <select name="teams_id" id="teams_id" required>
-            <option value="">Select</option>
-          </select>
-        </div>  
+        
 
-        <div class="projectFormItems">
-          <label for="agencies_id">Agency</label>
-          <select name="agencies_id" id="agencies_id" required>
-            <option  value="">Select</option>
-          </select>
-        </div>
-
-        <div class="projectFormItems">
-          <label for="freelancers_id">Freelancer</label>
-          <select name="freelancers_id" id="freelancers_id" required>
-            <option value="">Select</option>
-          </select>
-        </div>
+        
+        
         
               
 
         <div class="projectFormItems">
-          <label for="services_id">Service</label>
+          <label class="required" for="services_id">Service *</label>
           <select name="services_id" id="services_id" required>
             <option value="">Select</option>
           </select>
         </div>  
 
         <div class="projectFormItems">
-          <label for="technologies_id">Technology</label>
+          <label class="required" for="technologies_id">Technology *</label>
           <select name="technologies_id" id="technologies_id" required>
             <option value="">Select</option>
           </select>
         </div>
         
         <div class="projectFormItems">
-          <label for="workflows_id">Workflow</label>
+          <label class="required" for="workflows_id">Workflow *</label>
           <select name="workflows_id" id="workflows_id" required>
             <option value="">Select</option>
           </select>
         </div> 
 
+        
+
         <div class="projectFormItems">
-          <label for="affiliates_id">Affiliate</label>
-          <select name="affiliates_id" id="affiliates_id" required>
+          <label class="optional" for="teams_id">Team</label>
+          <select name="teams_id" id="teams_id">
             <option value="">Select</option>
           </select>
         </div>  
+
+        <div class="projectFormItems">
+          <label class="optional" for="agencies_id">Agency</label>
+          <select name="agencies_id" id="agencies_id">
+            <option  value="">Select</option>
+          </select>
+        </div>
+
+        <div class="projectFormItems">
+          <label class="optional" for="freelancers_id">Freelancer</label>
+          <select name="freelancers_id" id="freelancers_id">
+            <option value="">Select</option>
+          </select>
+        </div>
+
+        <div class="projectFormItems">
+          <label class="optional" for="affiliates_id">Affiliate</label>
+          <select name="affiliates_id" id="affiliates_id">
+            <option value="">Select</option>
+          </select>
+        </div>  
+
         
-        <button type="submit" id="add_btn"  onclick="checkEmptyFields()">ADD NEW</button> 
+        <button type="submit" id="add_btn"  onclick="checkEmptyFields()">ADD PROJECT</button> 
         <script>
           document.getElementById('projectForm').addEventListener('submit', function(event) {
             event.preventDefault();

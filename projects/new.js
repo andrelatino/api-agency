@@ -51,32 +51,33 @@ window.onload = function() {
     }
 }
 
-function checkEmptyFields() {
+function checkRequiredFields() {
   const form = document.getElementById('projectForm');
-  const formFields = form.querySelectorAll('input, textarea, select');
+  const requiredFields = form.querySelectorAll('[required]');
   let allFieldsAreFilled = true;
 
-  for (const field of formFields) {
-      if (field.value === '') {
-        allFieldsAreFilled = false;
-        break;
-      }
-  }  
+  for (const field of requiredFields) {
+    if (field.value === '') {
+      allFieldsAreFilled = false;
+      break;
+    }
+  }
 
   if (allFieldsAreFilled) {
-    // alert('All fields are filled');
     addNewContent();
-
-  } 
+  } else {
+    alert('Please fill in all required fields.');
+  }
 }
+
 const selectCustomers = document.querySelector('#customers_id');
-const selectAgencies = document.querySelector('#agencies_id');
-const selectFreelancers = document.querySelector('#freelancers_id');
 const selectManagers = document.querySelector('#managers_id');
 const selectServices = document.querySelector('#services_id');
 const selectTechnologies = document.querySelector('#technologies_id');
 const selectWorkflows = document.querySelector('#workflows_id');
 const selectTeams = document.querySelector('#teams_id');
+const selectAgencies = document.querySelector('#agencies_id');
+const selectFreelancers = document.querySelector('#freelancers_id');
 const selectAffiliates = document.querySelector('#affiliates_id');
 
 fetch('https://x8ki-letl-twmt.n7.xano.io/api:Nwul72Uo:v1/projects')

@@ -317,3 +317,28 @@ input[type=date]
   box-sizing: border-box;
   outline: none;
 }
+
+div#marketingModal {
+  display: none;
+  background: white;
+  width: 100%;
+  padding: 35px;
+  position: fixed;
+  bottom: -50%; /* set the initial position to be outside the viewport */
+  z-index: 999;
+  min-height: 50%;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; /* retain the final state of the animation */
+  box-sizing: border-box;
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -50%; /* start from outside the viewport */
+  }
+  to {
+    bottom: 0; /* slide up to the top */
+  }
+}

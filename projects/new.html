@@ -90,35 +90,35 @@
         
 
         <div class="projectFormItems">
-          <label class="optional" for="teams_id">Team</label>
-          <select name="teams_id" id="teams_id">
+          <label class="optional" for="teams_id">Team *</label>
+          <select name="teams_id" id="teams_id" required>
             <option value="">Select</option>
           </select>
         </div>  
 
         <div class="projectFormItems">
-          <label class="optional" for="agencies_id">Agency</label>
+          <label class="optional" for="agencies_id">Agency *</label>
           <select name="agencies_id" id="agencies_id">
             <option  value="">Select</option>
           </select>
         </div>
 
         <div class="projectFormItems">
-          <label class="optional" for="freelancers_id">Freelancer</label>
-          <select name="freelancers_id" id="freelancers_id">
+          <label class="optional" for="freelancers_id">Freelancer *</label>
+          <select name="freelancers_id" id="freelancers_id" required>
             <option value="">Select</option>
           </select>
         </div>
 
         <div class="projectFormItems">
-          <label class="optional" for="affiliates_id">Affiliate</label>
-          <select name="affiliates_id" id="affiliates_id">
+          <label class="optional" for="affiliates_id">Affiliate *</label>
+          <select name="affiliates_id" id="affiliates_id" required>
             <option value="">Select</option>
           </select>
-        </div>  
+        </div>
 
         
-        <button type="submit" id="add_btn"  onclick="checkEmptyFields()">ADD PROJECT</button> 
+        <button type="submit" id="add_btn"  onclick="checkRequiredFields()">ADD PROJECT</button> 
         <script>
           document.getElementById('projectForm').addEventListener('submit', function(event) {
             event.preventDefault();

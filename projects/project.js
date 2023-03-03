@@ -34,21 +34,6 @@ function getData(){
       </div>
       `;
 
-      // Get the button element by ID
-      const deleteButton = document.getElementById("delete");
-      deleteButton.addEventListener("click", function() {
-        
-        
-        deleteProject();
-
-
-      });
-
-      // Get the button element by ID
-      const addButton = document.getElementById("add");
-      addButton.addEventListener("click", function() {
-        window.location.href = './new.html';
-      });
 
         const filteredProjects = data.projects.filter(projects => projects.id === projectID);
         console.log(filteredProjects);
@@ -69,14 +54,14 @@ function getData(){
                 <p class = title>Project details</p> 
                 <p>ID : ${api.id}</p>
                 <p>Ref : ${api.created_at}</p>
-                <p>Budget : ${api.projectBudget}$</p>
+                <p>Budget : ${api.projectPrice}$</p>
                 <p>Start : ${api.projectStart}</p>
                 <p>End : ${api.projectEnd}</p>
                 <p>Service : ${api.service.serviceName}</p>
                 <p>Technology : ${api.technology.technologyName}</p>               
                 <p>Status : ${api.workflow.workflowName}</p>
             </div>             
-            <div id="agency" class="item">
+            <div id="${api.agency.agencyName}" class="item">
                 <p class = title>Agency assigned</p>
                 <p>ID : ${api.agency.id}</p>
                 <p>Ref : ${api.agency.created_at}</p>
@@ -109,6 +94,24 @@ function getData(){
             
         `;
           			
+          // Get the button element by ID
+        const deleteButton = document.getElementById("delete");
+        deleteButton.addEventListener("click", function() {       
+          deleteProject();
+        });
+
+        // Get the button element by ID
+        const addButton = document.getElementById("add");
+        addButton.addEventListener("click", function() {
+          window.location.href = './new.html';
+        });
+
+        // Get the button element by ID
+        const editButton = document.getElementById("edit");
+        editButton.addEventListener("click", function() {
+          localStorage.setItem("customerID", api.customer.id);
+          window.location.href = './edit.html';
+        });
 
         GridList.appendChild(DivItems);
         

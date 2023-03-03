@@ -15,9 +15,9 @@ function getData(){
         
         const GridList = document.getElementById('grid');
         
-        const totalProjectBudget = data.projects.budget;
+        const totalprojectPrice = data.projects.budget;
         const totalProjectOffer = data.agencies.budget;
-        const totalExpenses = totalProjectBudget-totalProjectOffer;
+        const totalExpenses = totalprojectPrice-totalProjectOffer;
         const totalProject = data.projects.total;
         const totalAgencies = data.agencies.total;
         const totalManagers = data.managers.total;
@@ -32,7 +32,7 @@ function getData(){
             <p id="counter">Update 60</p> 
         </div>
         <div class="sales item">
-            <p class="numberStats"> ${totalProjectBudget} $</p>
+            <p class="numberStats"> ${totalprojectPrice} $</p>
             <p class="titleStats"> Sales</p>
         </div>
         <div class="profits item">

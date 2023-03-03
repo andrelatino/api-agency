@@ -80,7 +80,10 @@ function loadFormContent(){
   const selectTeams = document.querySelector('#teams_id');
   const selectAgencies = document.querySelector('#agencies_id');
   const selectFreelancers = document.querySelector('#freelancers_id');
-  const selectAffiliates = document.querySelector('#affiliates_id');
+  const selectContracts = document.querySelector('#contracts_id');
+  const selectBillings = document.querySelector('#billings_id');
+  const selectPayments = document.querySelector('#payments_id');
+
 
   fetch('https://x8ki-letl-twmt.n7.xano.io/api:Nwul72Uo:v1/projectForm')
     .then(response => response.json())
@@ -145,11 +148,25 @@ function loadFormContent(){
           selectTeams.appendChild(option);
         });
 
-        data.affiliates.forEach(affiliate => {
+        data.contracts.forEach(contract => {
           const option = document.createElement('option');
-          option.value = affiliate.id;
-          option.textContent = affiliate.affiliateFirstname + ' ' + affiliate.affiliateLastname;
-          selectAffiliates.appendChild(option);
+          option.value = contract.id;
+          option.textContent = contract.contractName;
+          selectContracts.appendChild(option);
+        });
+
+        data.billings.forEach(billing => {
+          const option = document.createElement('option');
+          option.value = billing.id;
+          option.textContent = billing.billingBrand;
+          selectBillings.appendChild(option);
+        });
+
+        data.payments.forEach(payment => {
+          const option = document.createElement('option');
+          option.value = payment.id;
+          option.textContent = payment.paymentType;
+          selectPayments.appendChild(option);
         });
 
     })

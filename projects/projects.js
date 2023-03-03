@@ -41,7 +41,8 @@ function getData(){
                         
                         <p>ID : ${api.id}</p>
                         <p>Service : ${api.service.serviceName}</p>
-                        <p>Budget : ${api.projectBudget}$</p>
+                        <p>Contract : ${api.contract.contractName}</p>
+                        <p>Price : ${api.projectPrice}$</p>
                         <p>Status : ${api.workflow.workflowName}</p>                        
                         <p>Manager : ${api.manager.managerFirstname} ${api.manager.managerLastname}</p>                        
                     </div>
@@ -73,7 +74,19 @@ function getData(){
             button.addEventListener('click', () => {         
             
                 localStorage.setItem("projectID", api.id);
-                localStorage.setItem("projectRef", api.created_at); 
+                localStorage.setItem("billingID", api.billing.id);
+                localStorage.setItem("contractID", api.contract.id);
+                localStorage.setItem("paymentID", api.payment.id);
+                localStorage.setItem("projectPrice", api.projectPrice);
+                localStorage.setItem("projectStart", api.projectStart);
+                localStorage.setItem("projectEnd", api.projectEnd);
+                localStorage.setItem("managerID", api.manager.id);
+                localStorage.setItem("serviceID", api.service.id);
+                localStorage.setItem("technologyID", api.technology.id);
+                localStorage.setItem("workflowID", api.workflow.id);
+                localStorage.setItem("teamID", api.team.id);
+                localStorage.setItem("agencyID", api.agency.id);
+                localStorage.setItem("freelancerID", api.freelancer.id);
                 window.location.href = './project.html';
                 
 

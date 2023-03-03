@@ -432,3 +432,11 @@ img.addIcon {
     box-shadow: inset 0px 0px 0px 30px #046afb;
   }
 }
+
+div#No\ Team,
+div#No\ Agency,
+div#No\ Freelancer,
+div#No\ Affiliate
+{
+  display: none;
+}
